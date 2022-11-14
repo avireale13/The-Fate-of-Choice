@@ -30,15 +30,14 @@ label start:
 
     $ social = 0
     $ academic = 0
-
+    $ internships = False
     #FIRST MENU
     menu:
     #FIRST MENU CHOICE 1
         "Sure, where should we go?":
-            $ social +=1
+            $ social +=4
             j "Let's go to the cafe on campus"
             d "Sounds good!"
-
             hide josh casual neutral with dissolve
             hide derek casual neutral with dissolve
 
@@ -48,7 +47,13 @@ label start:
             show derek casual neutral at left with moveinleft
 
             d "I love this cafe"
-
+            j "Yeah, this place has the best strawberry shortcake and view"
+            d "Can't believe we are only going to be able to enjoy this for one more year"
+            d "Makes me feel a little sad"
+            j "Hey, we can always just come back as guest"
+            d "Is that allowed?"
+            j "Probably, they take credit card so it shouldn't matter"
+            d "Hm, guess I never really thought about that"
         #FIRST MENU CHOICE 2
         "Not today, I should catch up on some work before class":
             $ academic += 1
@@ -68,16 +73,33 @@ label start:
                 #SECOND MENU CHOICE 2
                 "look for internships":
                     "Let's do it"
+                    $ internships = True
 
 
 
-
-
+# This part should appear in the mid to late game
+if internships:
+    scene livingroom with dissolve
+    show derek casual neutral at left with moveinleft
+    d "Looks like I got some free time, guess I'll check my emails for the day"
+    d "Wait... that's the internship I applied for!"
+    d "No way!"
+    d "I got the internship!"
+    d "It looks like it's gonna eat up most of my free time, but I could definitely use the experience"
+    menu:
+        "Accept the Internship":
+            $ academic += 10
+            $ social -= 5
+            d "Screw it, I can do this. It is my last year of college."
+        "Don't accept the Internship":
+            $ academic -= 1
+            $ social += 2
+            d "On second thought, I am probably not cut out for this"
 
     
 
    
 
     # This ends the game.
-
+    "Academic Score: [academic]  Social Score: [social]"
     return

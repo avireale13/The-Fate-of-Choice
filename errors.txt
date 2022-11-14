@@ -2,21 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 57: menu statement expects a non-empty block.
-    menu:
-        ^
-
-File "game/script.rpy", line 58: expected statement.
-    "Splurge for the good stuff":
-                                ^
-
-File "game/script.rpy", line 63: expected statement.
-    "Pick the healthier option":
-                               ^
-
-File "game/script.rpy", line 68: expected statement.
-    "Half and half it":
-                      ^
+File "game/code/script.rpy", line 76: expected statement.
+    internships = True
+                ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Oct  8 20:00:30 2022
+Sun Nov 13 17:30:54 2022
