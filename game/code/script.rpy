@@ -101,5 +101,151 @@ if internships:
    
 
     # This ends the game.
+    
+    "Months later..."
+
+    #Academic life with Olivia
+    if academic = 0 & Olivia = True:
+       scene livingroom with dissolve
+       show derek casual neutral at left with moveinleft
+       show olivia casual smile at left with moveinright
+
+        d "Hey Babe, do you remember the job that I interviewed for a couple of weeks ago?"
+        o "Yea, why?"
+        d "The company finally contacted me back and I didn't get the job"
+        o "Oh my gosh!"
+        o "I'm so proud of you"
+        o "You deserve it. You really have worked so hard for this"
+        d "This really is the opportunity of a life time"
+        d "I've been working all year for this"
+
+        "Months later..."
+
+        o "Hey, I think we should talk.."
+        o "You've been super busy lately and I don't feel like a priority in your life anymore"
+        o "I just feel like this isn't working out anymore"
+        o "...we aren't as happy as we used to be"
+        d "My work is just really time consuming and I have to be in the office for most of every day"
+        d "I really am sorry"
+
+
+    #Academic life without Olivia
+    if academic = 0 & Olivia = False:
+        scene livingroom with dissolve
+        show derek casual neutral at left with moveinleft
+        show josh casual neutral at right with moveinright
+
+        d "Hey Josh, guess what.."
+        j "What?"
+        d "Do you remember the job that I interview for a couple of weeks ago?"
+        j "Yea, why?"
+        d "Well the company called this morning and offered me the job"
+        j "That's amazing! Congratulations man.."
+        j "See I told you having a little fun during your last year wouldn't ruin the “plan”"
+        j "I'm really proud of you"
+        d "I admit.. you were right"
+        d "We made a ton of memories that I'll never forget and I thank you for that"
+        d "Let's go get dinner to celebrate. My treat"
+
+        "Months later..."
+        "Derek and Josh run into each other at a cafe.."
+
+        j "Oh hey Derek, do you think we could get together and do something fun like old times this week?"
+        j "Feels like I haven't seen you in forever"
+        d "Sorry man, I've just been caught up at work."
+        d "Feels like I can never find a second of free time at this new job"
+        j "No worries, we can try another time."
+        d "I'm sorry. I miss the old times we had together"
+
+
+    #Social life with Olivia
+    if social = 0 & Olivia = True:
+
+        scene livingroom with dissolve
+        show derek casual neutral at left with moveinleft
+        show olivia casual smile at left with moveinright
+
+        d "Hey Babe, do you remember the job that I interviewed for a couple of weeks ago?"
+        o "Yea, why?"
+        d "The company finally contacted me back and I got the job"
+        o "Awe, that sucks."
+        o "I'm really sorry"
+        d "Eh.. it's alright"
+        d "I guess I just lost sight of my academics this past year"
+        d "My grades were slipping and I didn't do enough to prepare for my future after graduation"
+
+        "Months later..."
+
+        o "Hey, I think we should talk.."
+        o "You've been really unhappy for a while and nothing I've done ever seems to help"
+        o "I just feel like this isn't working out anymore"
+        o "...we aren't as happy as we used to be"
+        d "I'm really sorry. I should've done more to secure a better future for myself"
+
+
+    #Social life without Olivia
+    if social = 0 & Olivia = False:
+
+         scene livingroom with dissolve
+         show derek casual neutral at left with moveinleft
+         show josh casual neutral at right with moveinright
+
+         d "Hey Josh, do you remember the job that I interviewed for a couple of weeks ago?"
+         j "Yea, why?"
+         d "The company finally contacted me back and I didn't get the job"
+         j "Awe jeez, that sucks."
+         j "I'm really sorry man"
+         d "Eh.. it's alright"
+         d "I guess I just lost sight of my academics this past year"
+         d "My grades were slipping and I didn't do enough to prepare for my future after graduation"
+         j "You and me both"
+         j "I guess we'll both be stuck at our 9-5 jobs until we can figure something else out.."
+         d "I guess so. This is definitely not the plan I had in mind for this year."
+
+         hide josh casual neutral with dissolve
+         hide derek casual neutral with dissolve
+
+
+    #Balanced life with Olivia
+    if academic = 0 & social = 0 & Olivia = True:
+
+        scene livingroom with dissolve
+        show derek casual neutral at left with moveinleft
+        show olivia casual smile at left with moveinright
+
+        d "Hey babe..."
+        d "Do you remember that job that I interviewed for.."
+        o "Yea, what about it?"
+        d "Well the company called this morning and offered me the job"
+        o "Oh my gosh!"
+        o "I'm so proud of you"
+        o "You deserve it. You really have worked so hard for this"
+        d "This really is the opportunity of a life time and now we can get married and build a home together."
+        d "I'm so excited to see what else the future holds for us."
+        d "I love you Olivia"
+
+
+    #Balanced life without Olivia
+    if academic = 0 & social = 0 & Olivia = False:
+
+        scene livingroom with dissolve
+        show derek casual neutral at left with moveinleft
+        show josh casual neutral at right with moveinright
+
+        d "Hey Josh, guess what.."
+        j "What?"
+        d "Do you remember the job that I interview for a couple of weeks ago?"
+        j "Yea, why?"
+        d "Well the company called this morning and offered me the job"
+        j "That's amazing! Congratulations man.."
+        j "See I told you having a little fun during your last year wouldn't ruin the “plan”"
+        j "I'm really proud of you"
+        d "I admit.. you were right"
+        d "We made a ton of memories that I'll never forget and I thank you for that"
+        d "Let's go get dinner to celebrate. My treat"
+
+        hide josh casual neutral with dissolve
+        hide derek casual neutral with dissolve
+        
     "Academic Score: [academic]  Social Score: [social]"
     return
