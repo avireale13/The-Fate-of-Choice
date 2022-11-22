@@ -106,10 +106,19 @@ label start:
             j "The campus cafe actually has some really good food"
             j "I wish you would've came, you would've loved it"
             d "You're probably right but I wanted to catch up on things before class"
-            d "Speaking of..."
-            d "Are you ready to head to class?"
+            d "Speaking of class..."
+            d "It's 10:30, so we should probably head to class now"
+            j "Yea, you're right"
+            j "Let me grab my bag"
+
+            hide josh casual neutral with dissolve
+            hide derek casual neutral with dissolve
 
     return
+
+    scene classroom with dissolve
+    show derek casual neutral at left with moveinleft
+    show josh casual neutral at right with moveinright
 
 
 
