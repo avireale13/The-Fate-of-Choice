@@ -2,9 +2,25 @@
 errors listed below, and try again.
 
 
-File "game/code/script.rpy", line 76: expected statement.
-    internships = True
-                ^
+File "game/code/script.rpy", line 110: if statement expects a non-empty block.
+    if academic = 0 & Olivia = True:
+                                    ^
+
+File "game/code/script.rpy", line 116: if statement expects a non-empty block.
+    if academic = 0 & Olivia = False:
+                                     ^
+
+File "game/code/script.rpy", line 120: if statement expects a non-empty block.
+    if social = 0 & Olivia = True:
+                                  ^
+
+File "game/code/script.rpy", line 124: if statement expects a non-empty block.
+    if social = 0 & Olivia = False:
+                                   ^
+
+File "game/code/script.rpy", line 146: if statement expects a non-empty block.
+    if academic = 0 & social = 0 & Olivia = False:
+                                                  ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Nov 13 17:30:54 2022
+Tue Nov 22 12:41:16 2022
