@@ -247,5 +247,5 @@ if internships:
         hide josh casual neutral with dissolve
         hide derek casual neutral with dissolve
         
-    "Academic Score: [academic]  Social Score: [social]"
+    "You ended the game with an Academic Score of " + academic + " and a Social Score of " + social
     return
