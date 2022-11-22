@@ -50,10 +50,22 @@ label start:
             j "Yeah, this place has the best strawberry shortcake and view"
             d "Can't believe we are only going to be able to enjoy this for one more year"
             d "Makes me feel a little sad"
-            j "Hey, we can always just come back as guest"
+            j "Hey, we can always just come back as guests"
             d "Is that allowed?"
             j "Probably, they take credit card so it shouldn't matter"
             d "Hm, guess I never really thought about that"
+
+            "Some time passes and the two finish eating their breakfast..."
+
+            d "What time is it?"
+            j "10:30.."
+            j "Oh shoot, 10:30... we have to have to head to class"
+            d "Oh yea, you're right. We should go now so we're not late"
+
+           hide josh casual neutral with dissolve
+           hide derek casual neutral with dissolve
+
+
         #FIRST MENU CHOICE 2
         "Not today, I should catch up on some work before class":
             $ academic += 1
@@ -61,6 +73,10 @@ label start:
             j "I'll see you later in class"
 
             hide josh casual neutral with dissolve
+            hide derek casual neutral with dissolve
+
+            scene bedroomday with dissolve
+            show derek casual neutral at left with moveinleft
 
             "What should I do now?"
 
@@ -74,6 +90,31 @@ label start:
                 "look for internships":
                     "Let's do it"
                     $ internships = True
+
+            return
+
+            hide derek casual neutral with dissolve
+
+            "Some time passes..."
+
+            scene livingroom with dissolve
+            show derek casual neutral at left with moveinleft
+            show josh casual neutral at right with moveinright
+
+            d "How was your breakfast?"
+            j "It was great!"
+            j "The campus cafe actually has some really good food"
+            j "I wish you would've came, you would've loved it"
+            d "You're probably right but I wanted to catch up on things before class"
+            d "Speaking of..."
+            d "Are you ready to head to class?"
+
+    return
+
+
+
+
+
 
 
 
@@ -247,5 +288,5 @@ if internships:
         hide josh casual neutral with dissolve
         hide derek casual neutral with dissolve
         
-    "You ended the game with an Academic Score of " + academic + " and a Social Score of " + social
+    "You ended the game with an academic score of " + academic + " and a social score of" + social
     return
