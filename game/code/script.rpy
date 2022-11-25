@@ -228,15 +228,37 @@ label start:
             $ social += 2
             $ academic += 2
 
+            d "I really want to make sure I'm ready for that test"
+            j "I'll see you later tonight then"
+            j "I think I'm going to head to the gym for a little"
+            d "Alright, I'm going to head out now so I'm not late"
+            d "I'll see you when I get home"
 
+            "He heads to study group then comes home.."
 
-
+            j "How was study group?"
+            d "It was actually kind of fun and I learned a lot"
+            d "We played games that kind of helped me understand some things that I was confused about"
+            d "You  should come with me next time"
+            j "Yea, maybe next time"
+            j "Sounds like it was a good time"
+            d "I definitely enjoyed it"
+            d "But hey, I'm kind of tired so I'm going to head to bed"
+            j "Alright, I'll see you in the morning"
 
         "You're right.. I'll skip it today"
             $ social += 2
             $ academic += 2
 
+            d "Don't let me slip on studying next week"
+            d "But for now, let's just finish our show"
+            d "Might as well finish it off since we only have a few left"
+            j "You're right"
+            j "Let's do it"
 
+            "The two finish their show and off to bed.."
+
+    return
 
 
 
