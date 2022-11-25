@@ -148,7 +148,7 @@ label start:
     j "We can study later"
 
     menu:
-        "Not today.. I should try and learn a little more before this test"
+        "Not today.. I should try and learn a little more before this test":
             $ academic += 5
             $ social -= 2
 
@@ -190,7 +190,7 @@ label start:
             j "The test isn't until next week"
 
 
-        "Okay, fine.. I'll go but just this once"
+        "Okay, fine.. I'll go but just this once":
             $ academic -= 3
             $ social += 5
 
@@ -224,7 +224,7 @@ label start:
     return
 
     menu:
-        "Eh.. I think I'll go"
+        "Eh.. I think I'll go":
             $ social += 2
             $ academic += 2
 
@@ -246,7 +246,7 @@ label start:
             d "But hey, I'm kind of tired so I'm going to head to bed"
             j "Alright, I'll see you in the morning"
 
-        "You're right.. I'll skip it today"
+        "You're right.. I'll skip it today":
             $ social += 2
             $ academic += 2
 
@@ -260,9 +260,83 @@ label start:
 
     return
 
+    j "So I heard there's going to be a party tonight and I think we should definitely go"
+    d "Ah I don't know, I haven't actually been to a real college party before"
+    j "That's exactly why we should go"
+    j "It's all part of getting the full college experience"
+    j "This would be a great start"
+    d "I'm not sure, let me at least think about it first"
+    j "Fine"
+    j "You can think about it but I still expect you to say yes when I ask you later"
+    d "We'll see about that"
+    j "Well in the mean time, I'm thinking about going to the gym.."
+    j "Want to come with?"
+
+    menu:
+        "Sure, why not":
+            $ social += 2
+
+            d "Sounds fun"
+            d "Let me go get ready really quick"
+            j "Alright, I'll make us some breakfast so we can eat before we go"
+            j "Are eggs and some toast good?"
+            d "Sounds good to me"
+
+            "They eat breakfast and the two go to the gym together"
+
+            j "See that wasn't so bad"
+            d "I feel like I haven't been to the gym in a really long time"
+            d "I'm definitely going to be sore tomorrow but I'm glad I came"
+            j "We should make it a regular thing"
+            j "I like having a partner to spot me"
+            d "Yea, let's do it again this week"
+            d "I need something to keep me in shape"
+
+            "The two get lunch and bring it home.."
 
 
+        "Not today":
+            $ social -= 1
 
+            d "I'm not feeling up to it today, but maybe another day"
+            j "Alright, no worries"
+            j "I go often so you're always welcome to come with"
+            j "I'm going to head out now so I'll see you later"
+            d "Sounds good"
+
+            "What should I do now?"
+
+
+            menu
+                "Study for the upcoming test":
+                    $ academic += 1
+
+                    d "Let's do it"
+                    d "I should really catch up on my notes before this test"
+
+                    "He studies and learns a few new topics before his exam next week"
+
+
+                "Make breakfast and watch some tv":
+                    d "Let's do it"
+                    d "I'm starved and I could use some chill time"
+
+                    "He makes breakfast and relaxes at home"
+            return
+
+            d "How was the gym?"
+            j "It was good"
+            j "It would been a perfect day for you to come"
+            d "Why's that?"
+            j "I didn't have to wait for a single machine that I needed"
+            j "It was super empty today"
+            d "Darn"
+            d "I'll have to go next time"
+
+            "The two pick up lunch and bring it back home"
+
+
+    return
 
 
 
