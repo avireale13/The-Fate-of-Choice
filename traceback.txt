@@ -1,35 +1,35 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/code/characters.rpy", line 12, in script
-    image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
-  File "game/code/characters.rpy", line 12, in script
-    image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
-  File "game/code/characters.rpy", line 12, in <module>
-    image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
-NameError: name 'joshSize' is not defined
+  File "game/code/characters.rpy", line 14, in script
+    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
+  File "game/code/characters.rpy", line 14, in script
+    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
+  File "game/code/characters.rpy", line 14, in <module>
+    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
+NameError: name 'olivaSize' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Renpy\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/bootstrap.py", line 277, in bootstrap
     renpy.main.main()
-  File "C:\Renpy\renpy-8.0.3-sdk\renpy\main.py", line 558, in main
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/main.py", line 558, in main
     renpy.game.context().run(node)
-  File "game/code/characters.rpy", line 12, in script
-    image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
+  File "game/code/characters.rpy", line 14, in script
+    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
   File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "game/code/characters.rpy", line 12, in script
-    image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
-  File "C:\Renpy\renpy-8.0.3-sdk\renpy\ast.py", line 1230, in execute
+  File "game/code/characters.rpy", line 14, in script
+    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/ast.py", line 1230, in execute
     img = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Renpy\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 1085, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/code/characters.rpy", line 12, in <module>
-    image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
-NameError: name 'joshSize' is not defined
+  File "game/code/characters.rpy", line 14, in <module>
+    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
+NameError: name 'olivaSize' is not defined
 
-Windows-10-10.0.19045 AMD64
+macOS-10.16-x86_64-i386-64bit x86_64
 Ren'Py 8.0.3.22090809
 Semester Project 1.0
-Sun Nov 13 16:09:31 2022
+Thu Nov 24 11:44:05 2022
