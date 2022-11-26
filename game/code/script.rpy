@@ -333,11 +333,77 @@ label start:
             d "Darn"
             d "I'll have to go next time"
 
-            "The two pick up lunch and bring it back home"
-
+            "The two pick up lunch and bring it back home.."
 
     return
 
+    j "So about that party tonight.."
+    j "We're definitely going right?"
+    d "I still don't know"
+    d "Parties aren't really my scene"
+    j "Come on.."
+    j "You have to"
+    j "It's all part of getting the full experience"
+
+    menu:
+        "I'm just not feeling it tonight":
+            j "Oh come on.."
+            j "We've got to get you out"
+            d "I just don't feel like it tonight"
+            j "Well promise me you'll at least go to one before we graduate"
+            d "Eh.. maybe one party"
+            j "You better go to at least one"
+            d "I can't promise but I'll definitely think about it more next time"
+            d "Just let me know how it goes tonight"
+            j "I will when I get back"
+            j "I'm going to get ready now and head out"
+            d "Alright, I'll see you later"
+
+            "What should I do now?"
+
+            menu:
+                "Make some dinner and study for next weeks exam":
+                    $ academic += 1
+                    $ social -= 2
+                    d "Let's do it"
+
+                    "He makes food, studies, then heads too bed for the night.."
+                    $ social -= 3
+
+                "Order dinner to the apartment then head to bed":
+                    d "Let's do it"
+
+                    "He orders dinner then heads to bed for the night.."
+
+            return
+
+            d "So how was the party last night?"
+            j "It was super fun"
+            j "I really wish you would've come with last night"
+            j "You'll definitely have to come with next time"
+            d "I thought about it last night and I'm thinking I might actually"
+            j "I can promise you that the party was definitely more fun than whatever you were doing last night"
+            d "You're honestly probably right"
+
+        "Fine, I'll go":
+            $ social += 5
+            j "Heck yea!"
+            j "We're going to have so much fun tonight"
+            j "I'm going to go shower and get ready to go"
+            d "Sounds good, I'll go get ready too"
+            j "Alright, so after I'll order us a quick snack before we leave"
+            j "How does pizza sound?"
+            d "Sounds good to me"
+
+            "The two get ready,eat, then head to the party"
+
+            d "I have to admit, yesterday was actually pretty fun"
+            j "See"
+            j "I told you it would be fun"
+            d "You were right"
+
+
+    return
 
 
 
