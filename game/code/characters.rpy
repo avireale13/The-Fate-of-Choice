@@ -10,9 +10,13 @@ define oliviaSize = 0.35
 
 # Character Images
 
-#the game won't run with these characters unhashed because it is unable  to find these images
-#image derek casual neutral = "derek_casual_open.png"
+image derek casual neutral = "derek_casual_open.png"
+image derek eyebrow up = "derek_eyebrows_up.png"
+image derek smile = "derek_smile.png"
+image derek smile no teeth = "derek_smile_eyebrows_up.png"
+image derek sad = "derek_sad.png"
+image derek concerned = "derek_concerned.png"
 
 #image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
 
-#image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
+image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)

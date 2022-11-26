@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/code/script.rpy", line 305: expected statement.
-    "You ended the game with an academic score of "  + academic + " and a social score of " + social + "."
-                                                     ^
+File "game/code/script.rpy", line 272: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    show derek concerned at left with dissolve
+    ^
+
+File "game/code/script.rpy", line 277: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    show derek casual neutral at left with dissolve
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Nov 24 11:40:28 2022
+Sat Nov 26 18:19:56 2022
