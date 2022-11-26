@@ -175,9 +175,9 @@ label start:
             d "It's my last year so I can't give up now"
             pm "Well keep up to good work!"
 
-            scene livingroom with dissolve
-
             "He goes home and some time passes by..."
+
+            scene livingroom with dissolve
 
             j "How was class?"
             d "It was alright"
@@ -284,6 +284,8 @@ label start:
 
             "They eat breakfast and the two go to the gym together"
 
+            scene gym with dissolve
+
             j "See that wasn't so bad"
             d "I feel like I haven't been to the gym in a really long time"
             d "I'm definitely going to be sore tomorrow but I'm glad I came"
@@ -304,8 +306,9 @@ label start:
             j "I'm going to head out now so I'll see you later"
             d "Sounds good"
 
-            "What should I do now?"
+            scene bedroomevening with dissolve
 
+            "What should I do now?"
 
             menu
                 "Study for the upcoming test":
@@ -324,6 +327,8 @@ label start:
                     "He makes breakfast and relaxes at home"
             return
 
+            scene livingroom with dissolve
+
             d "How was the gym?"
             j "It was good"
             j "It would been a perfect day for you to come"
@@ -335,7 +340,10 @@ label start:
 
             "The two pick up lunch and bring it back home.."
 
+
     return
+
+    scene livingroom with dissolve
 
     j "So about that party tonight.."
     j "We're definitely going right?"
@@ -370,12 +378,18 @@ label start:
                     "He makes food, studies, then heads too bed for the night.."
                     $ social -= 3
 
+                    scene bedroomnight with dissolve
+
                 "Order dinner to the apartment then head to bed":
                     d "Let's do it"
 
                     "He orders dinner then heads to bed for the night.."
 
+                    scene bedroomnight with dissolve
+
             return
+
+            scene livingroom with dissolve
 
             d "So how was the party last night?"
             j "It was super fun"
@@ -397,11 +411,14 @@ label start:
 
             "The two get ready,eat, then head to the party"
 
+            scene bedroomnight with dissolve
+
+            scene livingroom with dissolve
+
             d "I have to admit, yesterday was actually pretty fun"
             j "See"
             j "I told you it would be fun"
             d "You were right"
-
 
     return
 
