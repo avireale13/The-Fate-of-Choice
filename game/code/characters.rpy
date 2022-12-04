@@ -6,7 +6,6 @@ define o = Character  ("Olivia", color="A55DF2")
 define pm = Character ("Mr.Murphy",  color="00499A")
 
 define joshSize = 0.35
-define oliviaSize = 0.35
 
 # Character Images
 
@@ -17,6 +16,6 @@ image derek smile no teeth = "derek_smile_eyebrows_up.png"
 image derek sad = "derek_sad.png"
 image derek concerned = "derek_concerned.png"
 
-#image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
+image olivia casual smile = "olivia_casual_smile.png"
 
 image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)

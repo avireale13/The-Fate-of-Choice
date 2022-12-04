@@ -1,5 +1,3 @@
-#ALL CHARACTERS ARE CURRENTLY HASHED OUT BECAUSE THE GAME WON'T RUN WITH THEM
-
 # The Fate of Choice
 
 # The game starts here.
@@ -587,21 +585,189 @@ label start:
             d "Sounds good to me"
 
             hide derek casual neutral at left with dissolve
-            hide josh casual neutral at left with dissolve
+            hide josh casual neutral at right with dissolve
 
             "The two get ready,eat, then head to the party"
 
             scene bedroomnight with dissolve
 
+            " "
+
             scene livingroom with dissolve
 
-            hide derek casual neutral at left with dissolve
-            hide josh casual neutral at left with dissolve
+            show derek casual neutral at left with moveinleft
+            show josh casual neutral at right with moveinright
 
             d "I have to admit, yesterday was actually pretty fun"
             j "See"
             j "I told you it would be fun"
             d "You were right"
+
+            hide derek casual neutral at left with dissolve
+            hide josh casual neutral at right with dissolve
+
+    "A few days go by and their upcoming test is just a night away..."
+
+    show derek casual neutral at left with moveinleft
+    show josh casual neutral at right with moveinright
+
+    j "So, I know you had a ton of fun at the party we went to last week.."
+    j "There's another one tonight"
+    j "And I definitely think we should go.."
+    d "But are test is literally tomorrow.."
+    d "I don't even think I'm ready for it.."
+    j "Man, screw the test"
+    j "We had so much fun last time"
+    j "I'll let you think on it again today"
+    j "In the mean time I say we go to the school cafe and pick up some food"
+    d "Sounds good to me"
+    d "I'm starving"
+    j "Me too"
+
+    hide derek casual neutral at left with dissolve
+    hide josh casual neutral at right with dissolve
+
+    "The two head out to the school cafe.."
+
+    scene campuscafe with dissolve
+
+    show josh casual neutral at right with moveinright
+    show derek casual neutral at left with moveinleft
+
+    j "No way..."
+    j "Is that who I think it is?"
+    d "No way.."
+    d "I think it is"
+    j "That's literally your high school sweetheart.."
+    j "You were just talking about her the other day"
+    j "You have to go talk to her"
+    d "She probably doesn't even remember me.."
+    j "You guys literally dating through your entire career of high school"
+    j "She definitely remembers you"
+    j "You should go talk to her"
+    j "I know you want to"
+
+    menu:
+        "I can't do it..":
+            d "She's changed a lot so she probably forgot about me"
+
+            "The cashier: Take-out order for Josh!"
+
+            d "Look perfect timing"
+            d "Our food is done"
+            j "Awe man.. you should've"
+            j "She definitely would've remembered you"
+            d "Let's grab the food and get out of here"
+
+            hide derek casual neutral at left with dissolve
+            hide josh casual neutral at right with dissolve
+
+            "The two head back to the apartment to eat..."
+
+            scene livingroom with dissolve
+
+            show josh casual neutral at right with moveinright
+            show derek casual neutral at left with moveinleft
+
+            j "You should've talked to her"
+            j "You've been bringing her up a lot in conversation lately so I know you wanted to"
+            d "You're right.."
+            d "I did but I was way to nervous to do it today"
+            d "Maybe if I see her again.."
+            j "If you see her again then it's a sign"
+            j "You definitely have to talk to her then"
+            d "Maybe I will"
+            d "Enough about her though.."
+            d "Let's eat and watch some tv"
+            j "Sounds good to me"
+
+            hide derek casual neutral at left with dissolve
+            hide josh casual neutral at right with dissolve
+
+            "The two finish their breakfast.."
+
+        "I'm going to go do it":
+            $ Olivia = True
+            $ social += 5
+
+            j "Heck yea man!"
+            j "I'll go wait outside"
+            d "Alright, don't watch me through the glass"
+            d "You're going to make me nervous"
+            j "Okay okay"
+            j "I won't"
+
+            hide josh casual neutral at right with dissolve
+            show oliva casual smile at right with moveinright
+
+            d "Hey Olivia"
+            d "I don't know if you.."
+            o "Oh my gosh.."
+            o "Is that THE Derek?"
+            d "Thank god you remember me"
+            d "I thought I was about to embarrass myself.."
+            o "Of course I remember"
+            o "Honestly, how could I forget?"
+            o "We got each other through high school"
+            d "I honestly couldn't have made it through high school without you"
+            d "So thank you for that"
+            d "So how've you been?"
+            o "Oh you know, busy with classes per usual"
+            d "I almost forgot you were just as dedicated to school as I am"
+            o "Oh yea, I want to secure my future now"
+            o "Now is where is counts"
+            d "See.."
+            d "Someone gets me"
+
+            "The cashier: Take-out order for Derek!"
+
+            d "Looks like that's my que"
+            d "I'm really happy I ran into you"
+            d "We should definitely catch up sometime"
+            o "I would love to"
+            d "You still have my number?"
+            o "Of course I do"
+            d "Good. I'll text you tonight?"
+            o "Sounds good to me. I'll see you soon"
+
+            hide olivia casual smile at right with dissolve
+            hide derek casual neutral at left with dissolve
+
+            "Derek grabs the food and heads back to the apartment with Josh.."
+
+            scene livingroom with dissolve
+
+            show josh casual neutral at right with moveinright
+            show derek casual neutral at left with moveinleft
+
+            j "Aren't you so glad you talked to her?"
+            d "I actually kind of am"
+            d "She remembered me right away"
+            j "Of course she did"
+            j "How could she forget your face?"
+            d "I was just nervous"
+            d "But I really am glad I got to see her"
+            d "I think I'm going to try to make plans to see her soon"
+            j "I say definitely do it"
+            d "Now enough about her.."
+            d "Let's eat and watch some tv"
+            j "Sounds good to me"
+
+            hide derek casual neutral at left with dissolve
+            hide josh casual neutral at right with dissolve
+
+            "The two finish their breakfast.."
+
+
+
+
+
+
+
+
+
+
+
 
 
 
