@@ -771,6 +771,168 @@ label start:
     j "Come on.. it'll be so much fun"
     d "Eh.."
     d "I don't know but what I do know is that I'm definitely not ready for that test"
+    j "It'll definitely be better than studying"
+
+    menu:
+        "Fine, I'll do it":
+            $ social += 5
+            $ academic -= 5
+
+            j "Yay!"
+            j "I promise you're going to have so much fun"
+            j "Go get ready and we'll leave in 20"
+            d "Alright, I'll get ready now"
+
+            hide derek casual neutral at left with dissolve
+            hide josh casual neutral at right with dissolve
+
+            "The two get ready and leave for the party.."
+            "Some time passes and the two arrive back home.."
+
+            show josh casual neutral at right with moveinright
+            show derek casual neutral at left with moveinleft
+
+            j "So.."
+            j "Wasn't it a great night??"
+            d "I will admit.. I did have fun"
+            d "But my grade on tomorrow's test is really going to reflect how I spent my night.."
+            j "Don't worry about it.."
+            j "We're going to be just fine tomorrow"
+            d "I do hope you're right on that"
+            d "Because I'm very nervous for tomorrow now.."
+            j "Hey.."
+            j "Don't let that ruin your night"
+            j "We had a great night tonight"
+            j "I'm going to head to bed though"
+            j "I'm exhausted"
+            d "Me too"
+            d "I'll see you in the morning"
+
+            hide derek casual neutral at left with dissolve
+            hide josh casual neutral at right with dissolve
+
+            scene bedroomnight with dissolve
+
+            " "
+            " "
+
+
+
+
+        "I'm just not feeling it tonight..":
+            j "Fine.."
+            j "I won't force you"
+            j "But you're going to miss out on a really fun night"
+            d "Maybe I will.."
+            d "But at least I'll be comfortable here"
+            j "Whatever you say.."
+            j "I'm going to get ready then head out"
+            j "I really wish you were coming..."
+
+            hide josh casual neutral at right with dissolve
+
+            d "What should I do now?"
+
+            menu:
+                "Study for tomorrows test":
+                    $ academic += 5
+                    $ social -= 1
+                    d "Let's do it cause I'm really not prepared for it"
+
+                    hide derek casual neutral at left with dissolve
+
+                    scene bedroomnight with dissolve
+
+                    "Derek studies all night for his exam in the morning.. "
+
+                    scene livingroom with dissolve
+
+                    "The next morning arrives and the two must take their exam.."
+
+                    show josh casual neutral at right with moveinright
+                    show derek casual neutral at left with moveinleft
+
+                    d "So how was the party last night?"
+                    j "It was so much fun"
+                    j "I really wish you would've came"
+                    d "I'm glad I didn't.. I got some good sleep in and I feel prepared"
+                    d "I feel a bit more refreshed for this test today"
+                    d "Speaking of.."
+                    d "The test opens in 15 minutes online so make sure you're all good to take it"
+                    j "Oh boy.. I'm so not ready"
+
+                    hide derek casual neutral at left with dissolve
+                    hide josh casual neutral at right with dissolve
+
+                    "The two take their test and get their grades back.."
+
+                    show josh casual neutral at right with moveinright
+                    show derek casual neutral at left with moveinleft
+
+                    j "Well that was awful.."
+                    j "I got a 65"
+                    d "Jeez.. now I'm really glad I didn't go last night"
+                    d "I got an 95"
+                    j "I guess you were right about staying last night.."
+                    d "You'll get it next time"
+
+                "Get some rest and go to bed early":
+                    $ academic -= 1
+                    $ social -= 2
+
+                    d "Let's do it cause I'm exhausted"
+                    d "I'll wake up earlier to study.."
+
+                    hide derek casual neutral at left with dissolve
+
+                    scene bedroomnight with dissolve
+
+                    "Derek heads to bed early.."
+
+                    scene livingroom with dissolve
+
+                    "The next morning arrives and the two must take their exam.."
+
+                    show josh casual neutral at right with moveinright
+                    show derek casual neutral at left with moveinleft
+
+                    d "So how was the party last night?"
+                    j "It was so much fun"
+                    j "I really wish you would've came"
+                    d "I'm glad I didn't.. I got some good sleep in last night"
+                    d "I feel a bit more refreshed for this test today"
+                    d "Speaking of.."
+                    d "The test opens in 15 minutes online so make sure you're all good to take it"
+                    j "Oh boy.. I'm so not ready"
+
+                    hide derek casual neutral at left with dissolve
+                    hide josh casual neutral at right with dissolve
+
+                   "The two take their test and get their grades back immediately.."
+
+                   show josh casual neutral at right with moveinright
+                   show derek casual neutral at left with moveinleft
+
+                   j "Well that was awful.."
+                   j "I got a 65"
+                   d "Jeez.. now I'm really glad I didn't go last night"
+                   d "I got an 80"
+                   d "Not what I wanted but at least I passed"
+                   j "I guess you were right about staying last night.."
+                   d "You'll get it next time"
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
