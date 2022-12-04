@@ -863,7 +863,7 @@ label start:
             j "I got a 65"
             show derek sad at left with dissolve
             d "I got an 68.."
-            d "That party really was a bad idea..""
+            d "That party really was a bad idea.."
             j "I guess you were right about staying last night.."
             d "Next time I'm listening to myself.."
             show derek casual neutral with dissolve
@@ -961,20 +961,20 @@ label start:
                     hide derek casual neutral at left with dissolve
                     hide josh casual neutral at right with dissolve
 
-                   "The two take their test and get their grades back right away.."
+                    "The two take their test and get their grades back right away.."
 
-                   show josh sad at right with moveinright
-                   show derek casual neutral at left with moveinleft
+                    show josh sad at right with moveinright
+                    show derek casual neutral at left with moveinleft
 
-                   j "Well that was awful.."
-                   j "I got a 65"
-                   show derek concerned at left with dissolve
-                   d "Jeez.. now I'm really glad I didn't go last night"
-                   d "I got an 80"
-                   d "Not what I wanted but at least I passed"
-                   show derek casual neutral at left with dissolve
-                   j "I guess you were right about staying last night.."
-                   d "You'll get it next time"
+                    j "Well that was awful.."
+                    j "I got a 65"
+                    show derek concerned at left with dissolve
+                    d "Jeez.. now I'm really glad I didn't go last night"
+                    d "I got an 80"
+                    d "Not what I wanted but at least I passed"
+                    show derek casual neutral at left with dissolve
+                    j "I guess you were right about staying last night.."
+                    d "You'll get it next time"
 
     j "Well on a lighter note.."
     j "There's a movie I've been wanting to watch that comes out this weekend"
@@ -995,16 +995,16 @@ label start:
 
     "The week carries on and it's finally the weekend.."
 
-     j "You ready for our movie night tonight?"
-     show derek concerned at left with dissolve
-     d "Movie night?"
-     j "Don't tell me you forgot.."
-     j "We were supposed to go this weekend.."
-     show derek surprised at left with dissolve
-     d "Oh yea. No I remember you say it now"
-     j "So we're going right?"
+    j "You ready for our movie night tonight?"
+    show derek concerned at left with dissolve
+    d "Movie night?"
+    j "Don't tell me you forgot.."
+    j "We were supposed to go this weekend.."
+    show derek surprised at left with dissolve
+    d "Oh yea. No I remember you say it now"
+    j "So we're going right?"
 
-     menu:
+    menu:
         "Of course we are":
             show derek casual neutral at left with dissolve
             $ academic -= 2
@@ -1023,15 +1023,16 @@ label start:
 
                 "Derek, Josh, and Olivia get dinner and have a great time at the movies"
 
-                else:
-                    j "Heck yea!"
-                    j "I've been waiting for this all week"
-                    j "Let's get food before the movie around 6:30"
-                    d "Sounds good to me!"
+            else:
+                j "Heck yea!"
+                j "I've been waiting for this all week"
+                j "Let's get food before the movie around 6:30"
+                d "Sounds good to me!"
 
-                    "Derek and Josh get food and have a great time at the movies"
+                "Derek and Josh get food and have a great time at the movies"
 
-            "I can't. I should really study for this upcoming exam":
+
+        "I can't. I should really study for this upcoming exam":
                 show derek concerned at left with dissolve
 
                 j "Dang, I've been waiting for this all week.."
@@ -1123,7 +1124,7 @@ label start:
 
 
     #Academic life without Olivia
-     if academic >= 0 and social < 0 and Olivia == False:
+    if academic >= 0 and social < 0 and Olivia == False:
 
         $ ending = 2
 
@@ -1166,7 +1167,7 @@ label start:
 
 
     #Social life with Olivia
-     if social >= 0 and academic < 0 and Olivia == True:
+    if social >= 0 and academic < 0 and Olivia == True:
 
         $ ending = 3;
 
@@ -1204,7 +1205,7 @@ label start:
 
 
     #Social life without Olivia
-     if social >= 0 and academic < 0 and Olivia == False:
+    if social >= 0 and academic < 0 and Olivia == False:
 
         $ ending = 4;
 
