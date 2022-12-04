@@ -611,13 +611,13 @@ label start:
     show derek casual neutral at left with moveinleft
     show josh casual neutral at right with moveinright
 
-    j "So, I know you had a ton of fun at the party we went to last week.."
+    j "So, I know there was a party just last week.."
     j "There's another one tonight"
     j "And I definitely think we should go.."
     d "But are test is literally tomorrow.."
     d "I don't even think I'm ready for it.."
     j "Man, screw the test"
-    j "We had so much fun last time"
+    j "We could have so much fun tonight"
     j "I'll let you think on it again today"
     j "In the mean time I say we go to the school cafe and pick up some food"
     d "Sounds good to me"
@@ -759,7 +759,18 @@ label start:
             "The two finish their breakfast.."
 
 
+    "Some time passes and it's almost time for the party tonight.."
 
+    show josh casual neutral at right with moveinright
+    show derek casual neutral at left with moveinleft
+
+    j "You know what time it is.."
+    j "Decision making time"
+    d "But our test really is tomorrow.."
+    d "I don't know if it's really a good idea tonight.."
+    j "Come on.. it'll be so much fun"
+    d "Eh.."
+    d "I don't know but what I do know is that I'm definitely not ready for that test"
 
 
 
