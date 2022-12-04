@@ -35,3 +35,5 @@ image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
 image josh mad = im.FactorScale("josh_mad.png", joshSize)
 image josh sad = im.FactorScale("josh_sad.png", joshSize)
 image josh think = im.FactorScale("josh_think.png", joshSize)
+
+image murphy casual = "murphy_casual.png"

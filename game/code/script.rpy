@@ -617,13 +617,17 @@ label start:
     show josh casual neutral at right with moveinright
 
     j "So, I know there was a party just last week.."
-    j "There's another one tonight"
+    show josh think at right with dissolve
+    j "Well.. There's another one tonight"
     j "And I definitely think we should go.."
-    d "But are test is literally tomorrow.."
+    show josh casual neutral at right with dissolve
+    show derek concerned at left with dissolve
+    d "But our test is literally tomorrow.."
     d "I don't even think I'm ready for it.."
     j "Man, screw the test"
     j "We could have so much fun tonight"
     j "I'll let you think on it again today"
+    show derek casual neutral at left with dissolve
     j "In the mean time I say we go to the school cafe and pick up some food"
     d "Sounds good to me"
     d "I'm starving"
@@ -641,11 +645,13 @@ label start:
 
     j "No way..."
     j "Is that who I think it is?"
+    show derek surprised blush at left with dissolve
     d "No way.."
     d "I think it is"
     j "That's literally your high school sweetheart.."
     j "You were just talking about her the other day"
     j "You have to go talk to her"
+    show derek concerned at left with dissolve
     d "She probably doesn't even remember me.."
     j "You guys literally dating through your entire career of high school"
     j "She definitely remembers you"
@@ -659,6 +665,7 @@ label start:
             "The cashier: Take-out order for Josh!"
 
             d "Look perfect timing"
+            show derek casual neutral at left with moveinleft
             d "Our food is done"
             j "Awe man.. you should've"
             j "She definitely would've remembered you"
@@ -676,12 +683,14 @@ label start:
 
             j "You should've talked to her"
             j "You've been bringing her up a lot in conversation lately so I know you wanted to"
+            show derek sad at left with moveinleft
             d "You're right.."
             d "I did but I was way to nervous to do it today"
             d "Maybe if I see her again.."
             j "If you see her again then it's a sign"
             j "You definitely have to talk to her then"
             d "Maybe I will"
+            show derek casual neutral at left with moveinleft
             d "Enough about her though.."
             d "Let's eat and watch some tv"
             j "Sounds good to me"
@@ -697,6 +706,7 @@ label start:
 
             j "Heck yea man!"
             j "I'll go wait outside"
+            show derek smile no teeth at left with dissolve
             d "Alright, don't watch me through the glass"
             d "You're going to make me nervous"
             j "Okay okay"
@@ -705,9 +715,11 @@ label start:
             hide josh casual neutral at right with dissolve
             show oliva casual smile at right with moveinright
 
+            show derek surprised blush at left with dissolve
             d "Hey Olivia"
             d "I don't know if you.."
             o "Oh my gosh.."
+            show olivia smile blush at right with dissolve
             o "Is that THE Derek?"
             d "Thank god you remember me"
             d "I thought I was about to embarrass myself.."
@@ -715,6 +727,7 @@ label start:
             o "Honestly, how could I forget?"
             o "We got each other through high school"
             d "I honestly couldn't have made it through high school without you"
+            show derek smile at left with dissolve
             d "So thank you for that"
             d "So how've you been?"
             o "Oh you know, busy with classes per usual"
@@ -726,10 +739,12 @@ label start:
 
             "The cashier: Take-out order for Derek!"
 
+            show derek casual neutral at left with dissolve
             d "Looks like that's my que"
             d "I'm really happy I ran into you"
             d "We should definitely catch up sometime"
             o "I would love to"
+            show olivia smile at right with dissolve
             d "You still have my number?"
             o "Of course I do"
             d "Good. I'll text you tonight?"
@@ -771,6 +786,7 @@ label start:
 
     j "You know what time it is.."
     j "Decision making time"
+    show derek concerned at left with dissolve
     d "But our test really is tomorrow.."
     d "I don't know if it's really a good idea tonight.."
     j "Come on.. it'll be so much fun"
@@ -780,6 +796,7 @@ label start:
 
     menu:
         "Fine, I'll do it":
+            show derek casual neutral at left with dissolve
             $ social += 5
             $ academic -= 5
 
@@ -799,15 +816,19 @@ label start:
 
             j "So.."
             j "Wasn't it a great night??"
+            show derek smile no teeth at left with dissolve
             d "I will admit.. I did have fun"
             d "But my grade on tomorrow's test is really going to reflect how I spent my night.."
+            show derek concerned at left with dissolve
             j "Don't worry about it.."
             j "We're going to be just fine tomorrow"
+            show derek concerned at left with dissolve
             d "I do hope you're right on that"
             d "Because I'm very nervous for tomorrow now.."
             j "Hey.."
             j "Don't let that ruin your night"
             j "We had a great night tonight"
+            show derek casual neutral at left with dissolve
             j "I'm going to head to bed though"
             j "I'm exhausted"
             d "Me too"
@@ -820,6 +841,33 @@ label start:
 
             " "
             " "
+            "The next morning arrives and the two must take their exam.."
+
+            show josh casual neutral at right with moveinright
+            show derek casual neutral at left with moveinleft
+
+            d "The test opens in 15 minutes online so make sure you're all good to take it"
+            j "Oh boy.. I'm so not ready"
+            show derek concerned at left with dissolve
+            d "Me neither"
+
+            hide derek concerned at left with dissolve
+            hide josh casual neutral at right with dissolve
+
+            "The two take their test and get their grades back right away.."
+
+            show josh sad at right with moveinright
+            show derek casual neutral at left with moveinleft
+
+            j "Well that was awful.."
+            j "I got a 65"
+            show derek sad at left with dissolve
+            d "I got an 68.."
+            d "That party really was a bad idea..""
+            j "I guess you were right about staying last night.."
+            d "Next time I'm listening to myself.."
+            show derek casual neutral with dissolve
+
 
         "I'm just not feeling it tonight..":
             j "Fine.."
@@ -827,6 +875,7 @@ label start:
             j "But you're going to miss out on a really fun night"
             d "Maybe I will.."
             d "But at least I'll be comfortable here"
+            show derek casual neutral at left with dissolve
             j "Whatever you say.."
             j "I'm going to get ready then head out"
             j "I really wish you were coming..."
@@ -868,12 +917,14 @@ label start:
 
                     "The two take their test and get their grades back.."
 
-                    show josh casual neutral at right with moveinright
+                    show josh sad at right with moveinright
                     show derek casual neutral at left with moveinleft
 
                     j "Well that was awful.."
                     j "I got a 65"
+                    show derek concerned at left with dissolve
                     d "Jeez.. now I'm really glad I didn't go last night"
+                    show derek casual neutral at left with dissolve
                     d "I got an 95"
                     j "I guess you were right about staying last night.."
                     d "You'll get it next time"
@@ -910,16 +961,18 @@ label start:
                     hide derek casual neutral at left with dissolve
                     hide josh casual neutral at right with dissolve
 
-                   "The two take their test and get their grades back immediately.."
+                   "The two take their test and get their grades back right away.."
 
-                   show josh casual neutral at right with moveinright
+                   show josh sad at right with moveinright
                    show derek casual neutral at left with moveinleft
 
                    j "Well that was awful.."
                    j "I got a 65"
+                   show derek concerned at left with dissolve
                    d "Jeez.. now I'm really glad I didn't go last night"
                    d "I got an 80"
                    d "Not what I wanted but at least I passed"
+                   show derek casual neutral at left with dissolve
                    j "I guess you were right about staying last night.."
                    d "You'll get it next time"
 
@@ -943,14 +996,17 @@ label start:
     "The week carries on and it's finally the weekend.."
 
      j "You ready for our movie night tonight?"
+     show derek concerned at left with dissolve
      d "Movie night?"
      j "Don't tell me you forgot.."
      j "We were supposed to go this weekend.."
+     show derek surprised at left with dissolve
      d "Oh yea. No I remember you say it now"
      j "So we're going right?"
 
      menu:
         "Of course we are":
+            show derek casual neutral at left with dissolve
             $ academic -= 2
             $ social += 4
 
@@ -976,12 +1032,16 @@ label start:
                     "Derek and Josh get food and have a great time at the movies"
 
             "I can't. I should really study for this upcoming exam":
+                show derek concerned at left with dissolve
 
                 j "Dang, I've been waiting for this all week.."
+                show josh sad at right with dissolve
                 d "I know..."
                 d "I'm sorry"
                 d "I completely forgot about this exam and i don't want my grades to slip"
                 j "Well, I'll try not to spoil the movie when I get back"
+                show josh casual neutral at right with dissolve
+                show derek casual neutral at left with dissolve
                 d "You better not!"
 
                 hide josh casual neutral at right with dissolve
@@ -1030,7 +1090,7 @@ label start:
 
         scene campuscafe with dissolve
         show derek casual neutral at left with moveinleft
-        show olivia casual smile at left with moveinright
+        show olivia casual smile at right with moveinright
 
         d "Hey Babe, do you remember the job that I interviewed for a couple of weeks ago?"
         o "Yea, why?"
@@ -1042,7 +1102,7 @@ label start:
         d "I've been working all year for this"
 
         hide derek casual neutral at left with dissolve
-        hide olivia casual smile at left with dissolve
+        hide olivia casual smile at right with dissolve
 
         scene kitchenday with dissolve
 
@@ -1057,6 +1117,9 @@ label start:
         o "...we aren't as happy as we used to be"
         d "My work is just really time consuming and I have to be in the office for most of every day"
         d "I really am sorry"
+
+        hide derek sad at left with dissolve
+        hide olivia casual frown at right with dissolve
 
 
     #Academic life without Olivia
@@ -1098,6 +1161,9 @@ label start:
         show josh mad at right with moveinright
         j "No worries, we can try another time."
 
+        hide derek sad at left with dissolve
+        hide josh mad at right with dissolve
+
 
     #Social life with Olivia
      if social >= 0 and academic < 0 and Olivia == True:
@@ -1132,6 +1198,9 @@ label start:
         o "I just feel like this isn't working out anymore"
         o "...we aren't as happy as we used to be"
         d "I'm really sorry. I should've done more to secure a better future for myself"
+
+        hide derek sad at left with dissolve
+        hide olivia casual frown at right with dissolve
 
 
     #Social life without Olivia
@@ -1168,7 +1237,7 @@ label start:
 
         scene livingroom with dissolve
         show derek casual neutral at left with moveinleft
-        show olivia casual smile at left with moveinright
+        show olivia casual smile at right with moveinright
 
         d "Hey babe..."
         d "Do you remember that job that I interviewed for.."
@@ -1183,7 +1252,7 @@ label start:
         o "I love you too"
 
         hide derek casual neutral at left with dissolve
-        hide olivia casual smile at left with dissolve
+        hide olivia casual smile at right with dissolve
 
 
     #Balanced life without Olivia
