@@ -1,35 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/code/characters.rpy", line 20, in script
-    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
-  File "game/code/characters.rpy", line 20, in script
-    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
-  File "game/code/characters.rpy", line 20, in <module>
-    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
-NameError: name 'olivaSize' is not defined
+  File "game/code/script.rpy", line 983, in script
+    if Olivia:
+  File "game/code/script.rpy", line 983, in <module>
+    if Olivia:
+NameError: name 'Olivia' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/bootstrap.py", line 277, in bootstrap
-    renpy.main.main()
-  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/main.py", line 558, in main
-    renpy.game.context().run(node)
-  File "game/code/characters.rpy", line 20, in script
-    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "game/code/characters.rpy", line 20, in script
-    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
-  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/ast.py", line 1230, in execute
-    img = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 1085, in py_eval_bytecode
+  File "game/code/script.rpy", line 983, in script
+    if Olivia:
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\ast.py", line 2115, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/code/characters.rpy", line 20, in <module>
-    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
-NameError: name 'olivaSize' is not defined
+  File "game/code/script.rpy", line 983, in <module>
+    if Olivia:
+NameError: name 'Olivia' is not defined
 
-macOS-10.16-x86_64-i386-64bit x86_64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 Semester Project 1.0
-Sat Nov 26 18:55:02 2022
+Sun Dec  4 17:15:20 2022

@@ -37,11 +37,13 @@ label start:
     $ social = 0
     $ academic = 0
     $ internships = False
+    $ Olivia = False
+    $ ending = 0
     #FIRST MENU
     menu:
     #FIRST MENU CHOICE 1
         "Sure, where should we go?":
-            $ social +=4
+            $ social += 4
             j "Let's go to the cafe on campus"
 
             show derek smile at left with dissolve
@@ -76,7 +78,7 @@ label start:
             "Some time passes and the two finish eating their breakfast..."
 
             d "What time is it?"
-            j "10:30.."
+            j "10:30..."
 
             show derek concerned at left with dissolve
 
@@ -111,6 +113,7 @@ label start:
             menu:
                 #SECOND MENU CHOICE 1
                 "work on homework":
+                    $ academic += 3
                     show derek smile at left with dissolve
                     "Let's do it"
 
@@ -153,19 +156,19 @@ label start:
     show derek casual neutral at left with moveinleft
     show josh casual neutral at right with moveinright
 
-    "The two arrive to class.."
+    "The two arrive to class..."
 
     d "Looks like our professor is running late today"
     j "You're right..."
     j "He 10 minutes late right now"
     j "You know what that means right?"
-    d "What..?"
+    d "What...?"
     j "If our professor doesn't show up in 5 more minutes, then we get to leave"
 
     show derek eyebrow up at left with dissolve
 
-    d "That's not even a real thing.."
-    d "You know that right.."
+    d "That's not even a real thing..."
+    d "You know that right..."
     j "It may not be to everyone else, but it is to me"
     j "I say we skip if he doesn't show up in 5 more minutes"
 
@@ -176,21 +179,21 @@ label start:
 
     show derek casual neutral with dissolve
 
-    "10 minutes go by.."
+    "10 minutes go by..."
 
-    j "I gave it 10 minutes instead of 5.."
+    j "I gave it 10 minutes instead of 5..."
     j "I say we skip"
 
     show derek concerned at left with dissolve
 
-    d "I'm not sure.."
+    d "I'm not sure..."
     d "We have a test coming up soon and I don't think I understand these topics fully"
-    j "Oh come on.."
+    j "Oh come on..."
     j "It's only on class"
     j "We can study later"
 
-    menu:
-        "Not today.. I should try and learn a little more before this test":
+    menu: # Skip Class Moment
+        "Not today.. I should try and learn a little more before this test": # Option 1
             $ academic += 5
             $ social -= 2
 
@@ -212,7 +215,7 @@ label start:
 
             show derek casual neutral at left with dissolve
 
-            #add teacher character sprite here
+            show murphy casual at right with moveinright
 
             d "Hey Mr.Murphy, I'm having a hard time understanding some of the topics that we went over in class today"
             pm "No worries, I'm always here to help"
@@ -259,7 +262,7 @@ label start:
             j "The test isn't until next week"
 
 
-        "Okay, fine.. I'll go but just this once":
+        "Okay, fine.. I'll go but just this once": # Option 2
             $ academic -= 3
             $ social += 5
 
@@ -309,11 +312,11 @@ label start:
             j "The test isn't until next week"
 
 
-    menu:
-        "Eh.. I think I'll go":
+    menu: # Study Group Moment
+        "Eh.. I think I'll go": # Option 1
             show derek eyebrow up at left with dissolve
-            $ social += 2
-            $ academic += 2
+            $ social -= 1
+            $ academic += 8
 
             d "I really want to make sure I'm ready for that test"
             j "I'll see you later tonight then"
@@ -340,9 +343,9 @@ label start:
             d "But hey, I'm kind of tired so I'm going to head to bed"
             j "Alright, I'll see you in the morning"
 
-        "You're right.. I'll skip it today":
-            $ social += 2
-            $ academic += 2
+        "You're right.. I'll skip it today": # Option 2
+            $ social += 8
+            $ academic -= 2
 
             show derek concerned at left with dissolve
 
@@ -382,9 +385,9 @@ label start:
     j "Well in the mean time, I'm thinking about going to the gym.."
     j "Want to come with?"
 
-    menu:
-        "Sure, why not":
-            $ social += 2
+    menu: # Gym Moment
+        "Sure, why not": # Option 1
+            $ social += 4
 
             d "Sounds fun"
             d "Let me go get ready really quick"
@@ -416,8 +419,8 @@ label start:
             "The two get lunch and bring it home.."
 
 
-        "Not today":
-            $ social -= 4
+        "Not today": # Option 2
+            $ social -= 3
 
             show derek concerned at left with dissolve
 
@@ -440,7 +443,7 @@ label start:
             "What should I do now?"
 
             menu:
-                "Study for the upcoming test":
+                "Study for the upcoming test": # Option 1
                     $ academic += 4
 
                     show derek smile at left with dissolve
@@ -456,7 +459,7 @@ label start:
                     "He studies and learns a few new topics before his exam next week"
 
 
-                "Make breakfast and watch some tv":
+                "Make breakfast and watch some tv": # Option 2
                     show derek smile at left with dissolve
 
                     d "Let's do it"
@@ -469,7 +472,7 @@ label start:
 
                     "He makes breakfast and relaxes at home"
 
-                "Look for internships":
+                "Look for internships": # Option 3
                     show derek smile at left with dissolve
                     d "Let's do it"
                     $ internships = True
@@ -513,8 +516,8 @@ label start:
     j "You have to"
     j "It's all part of getting the full experience"
 
-    menu:
-        "I'm just not feeling it tonight":
+    menu: # Party Moment
+        "I'm just not feeling it tonight": # Option 1
             j "Oh come on.."
             j "We've got to get you out"
             d "I just don't feel like it tonight"
@@ -534,9 +537,9 @@ label start:
 
             "What should I do now?"
 
-            menu:
-                "Make some dinner and study for next weeks exam":
-                    $ academic += 1
+            menu: # No party path
+                "Make some dinner and study for next weeks exam": # Option 1
+                    $ academic += 4
                     $ social -= 2
 
                     show derek smile at left with dissolve
@@ -545,22 +548,14 @@ label start:
 
                     hide derek smile at left with dissolve
 
-                    "He makes food, studies, then heads too bed for the night.."
-                    $ social -= 3
+                    "He makes food, studies, then heads too bed for the night..."
 
                     scene bedroomnight with dissolve
 
-                "Order dinner to the apartment then head to bed":
-
+                "Look for internships": # Option 2
                     show derek smile at left with dissolve
-
-                    d "Let's do it"
-
-                    hide derek smile at left with dissolve
-
-                    "He orders dinner then heads to bed for the night.."
-
-                    scene bedroomnight with dissolve
+                    "Let's do it"
+                    $ internships = True
 
 
             scene livingroom with dissolve
@@ -576,8 +571,8 @@ label start:
             j "I can promise you that the party was definitely more fun than whatever you were doing last night"
             d "You're honestly probably right"
 
-        "Fine, I'll go":
-            $ social += 5
+        "Fine, I'll go": # Option 2
+            $ social += 7
             j "Heck yea!"
 
             show derek casual neutral at left with dissolve
@@ -658,10 +653,10 @@ label start:
     j "You should go talk to her"
     j "I know you want to"
 
-    menu:
-        "I can't do it..":
+    menu: # Olivia Moment
+        "I can't do it..": # Option 1
             d "She's changed a lot so she probably forgot about me"
-
+            
             "The cashier: Take-out order for Josh!"
 
             d "Look perfect timing"
@@ -700,9 +695,9 @@ label start:
 
             "The two finish their breakfast.."
 
-        "I'm going to go do it":
+        "I'm going to go do it": # Option 2
             $ Olivia = True
-            $ social += 5
+            $ social += 10
 
             j "Heck yea man!"
             j "I'll go wait outside"
@@ -713,16 +708,16 @@ label start:
             j "I won't"
 
             hide josh casual neutral at right with dissolve
-            show oliva casual smile at right with moveinright
+            show olivia casual smile at right with moveinright
 
             show derek surprised blush at left with dissolve
             d "Hey Olivia"
-            d "I don't know if you.."
-            o "Oh my gosh.."
+            d "I don't know if you..."
+            o "Oh my gosh..."
             show olivia smile blush at right with dissolve
             o "Is that THE Derek?"
             d "Thank god you remember me"
-            d "I thought I was about to embarrass myself.."
+            d "I thought I was about to embarrass myself..."
             o "Of course I remember"
             o "Honestly, how could I forget?"
             o "We got each other through high school"
@@ -734,7 +729,7 @@ label start:
             d "I almost forgot you were just as dedicated to school as I am"
             o "Oh yea, I want to secure my future now"
             o "Now is where is counts"
-            d "See.."
+            d "See..."
             d "Someone gets me"
 
             "The cashier: Take-out order for Derek!"
@@ -784,21 +779,21 @@ label start:
     show josh casual neutral at right with moveinright
     show derek casual neutral at left with moveinleft
 
-    j "You know what time it is.."
+    j "You know what time it is..."
     j "Decision making time"
     show derek concerned at left with dissolve
-    d "But our test really is tomorrow.."
-    d "I don't know if it's really a good idea tonight.."
+    d "But our test really is tomorrow..."
+    d "I don't know if it's really a good idea tonight..."
     j "Come on.. it'll be so much fun"
-    d "Eh.."
+    d "Eh..."
     d "I don't know but what I do know is that I'm definitely not ready for that test"
     j "It'll definitely be better than studying"
 
-    menu:
+    menu: # Party before exam
         "Fine, I'll do it":
             show derek casual neutral at left with dissolve
-            $ social += 5
-            $ academic -= 5
+            $ social += 10
+            $ academic -= 7
 
             j "Yay!"
             j "I promise you're going to have so much fun"
@@ -869,7 +864,7 @@ label start:
             show derek casual neutral with dissolve
 
 
-        "I'm just not feeling it tonight..":
+        "I'm just not feeling it tonight..": # Option 2
             j "Fine.."
             j "I won't force you"
             j "But you're going to miss out on a really fun night"
@@ -884,10 +879,10 @@ label start:
 
             d "What should I do now?"
 
-            menu:
-                "Study for tomorrows test":
-                    $ academic += 5
-                    $ social -= 1
+            menu: # No party path
+                "Study for tomorrows test": # Option 1
+                    $ academic += 10
+                    $ social -= 7
                     d "Let's do it cause I'm really not prepared for it"
 
                     hide derek casual neutral at left with dissolve
@@ -929,9 +924,9 @@ label start:
                     j "I guess you were right about staying last night.."
                     d "You'll get it next time"
 
-                "Get some rest and go to bed early":
-                    $ academic -= 1
-                    $ social -= 2
+                "Get some rest and go to bed early": # Option 2
+                    $ academic += 3
+                    $ social -= 3
 
                     d "Let's do it cause I'm exhausted"
                     d "I'll wake up earlier to study.."
@@ -980,7 +975,7 @@ label start:
     j "There's a movie I've been wanting to watch that comes out this weekend"
     j "I think we should go watch it"
 
-    if Olivia = True:
+    if Olivia:
         j "You could even bring Olivia with if you wanted to"
         d "I suppose I could actually"
         d "Sounds like it would be fun"
@@ -1004,15 +999,16 @@ label start:
     d "Oh yea. No I remember you say it now"
     j "So we're going right?"
 
-    menu:
-        "Of course we are":
+    menu: # Movie Moment
+        "Of course we are": # Option 1
             show derek casual neutral at left with dissolve
             $ academic -= 2
-            $ social += 4
+            $ social += 5
 
             d "It's going to be a lot of fun"
 
             if Olivia:
+                $ social += 2
                 d "I'm going to text Olivia and remind her about the movie tonight"
                 j "Sounds good to me"
                 j "Tell her to be here around 6:30 so we can get food before"
@@ -1032,9 +1028,10 @@ label start:
                 "Derek and Josh get food and have a great time at the movies"
 
 
-        "I can't. I should really study for this upcoming exam":
+        "I can't. I should really study for this upcoming exam": # Option 2
                 show derek concerned at left with dissolve
-
+                $ social -= 2
+                $ academic += 5
                 j "Dang, I've been waiting for this all week.."
                 show josh sad at right with dissolve
                 d "I know..."
@@ -1054,7 +1051,7 @@ label start:
     show derek casual neutral at left with moveinleft
 
     d "I can't believe we're starting our last semester of college..."
-    j "I know right.. it's crazy"
+    j "I know right... it's crazy"
     d "Only a few more weeks until graduation.."
     d "That makes me nervous"
 
@@ -1062,7 +1059,7 @@ label start:
     hide derek casual neutral at left with dissolve
 
 
-    if internships:
+    if internships: # Internship moment
         scene livingroom with dissolve
         show derek casual neutral at left with moveinleft
         d "Looks like I got some free time, guess I'll check my emails for the day"

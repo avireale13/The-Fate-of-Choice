@@ -5,16 +5,20 @@ define j = Character("Josh", color="009A25")
 define o = Character  ("Olivia", color="A55DF2")
 define pm = Character ("Mr.Murphy",  color="00499A")
 
-define joshSize = 0.35
+define joshSize = 0.369
+define joshCasualSize = 0.4
 define oliviaSize = 0.22
 define derekSize = 0.69
 define derekSize2 = 1.35
+define murphySize = 0.35
+
 
 define oliviaWidth = 2766
 define oliviaHeight = 3500
 define derekWidth = 486
 define derekHeight = 600
-
+define murphyWidth = 1773
+define murphyHeight = 2500
 # Character Images
 
 image derek casual neutral = im.FactorScale(im.Crop("derek_casual_open.png", (0, 0, derekWidth, derekHeight)), derekSize2)
@@ -31,9 +35,9 @@ image olivia casual smile = im.FactorScale(im.Crop("olivia_casual_smile.png", (0
 image olivia casual smile blush = im.FactorScale(im.Crop("olivia_casual_smile_blush.png", (0, 0, oliviaWidth, oliviaHeight)), oliviaSize)
 image olivia casual open blush = im.FactorScale(im.Crop("olivia_casual_open_blush.png", (0, 0, oliviaWidth, oliviaHeight)), oliviaSize)
 
-image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
+image josh casual neutral = im.FactorScale("josh_casual_open.png", joshCasualSize)
 image josh mad = im.FactorScale("josh_mad.png", joshSize)
 image josh sad = im.FactorScale("josh_sad.png", joshSize)
 image josh think = im.FactorScale("josh_think.png", joshSize)
 
-image murphy casual = "murphy_casual.png"
+image murphy casual = im.FactorScale(im.Crop("murphy_casual.png", (0, 0, murphyWidth, murphyHeight)), murphySize)

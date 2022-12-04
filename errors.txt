@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/code/script.rpy", line 1035: expected statement.
-    "I can't. I should really study for this upcoming exam":
-                                                           ^
+File "game/code/script.rpy", line 217: expected 'simple_expression' not found.
+    show murphy casual at right with with moveinright
+                                     ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Dec  4 15:01:33 2022
+Sun Dec  4 17:20:59 2022
