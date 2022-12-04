@@ -417,7 +417,7 @@ label start:
 
 
         "Not today":
-            $ social -= 1
+            $ social -= 4
 
             show derek concerned at left with dissolve
 
@@ -441,7 +441,7 @@ label start:
 
             menu:
                 "Study for the upcoming test":
-                    $ academic += 1
+                    $ academic += 4
 
                     show derek smile at left with dissolve
 
@@ -468,6 +468,11 @@ label start:
                     hide casual neutral at left with dissolve
 
                     "He makes breakfast and relaxes at home"
+
+                "Look for internships":
+                    show derek smile at left with dissolve
+                    d "Let's do it"
+                    $ internships = True
 
             scene livingroom with dissolve
 
@@ -816,9 +821,6 @@ label start:
             " "
             " "
 
-
-
-
         "I'm just not feeling it tonight..":
             j "Fine.."
             j "I won't force you"
@@ -921,63 +923,112 @@ label start:
                    j "I guess you were right about staying last night.."
                    d "You'll get it next time"
 
+    j "Well on a lighter note.."
+    j "There's a movie I've been wanting to watch that comes out this weekend"
+    j "I think we should go watch it"
+
+    if Olivia = True:
+        j "You could even bring Olivia with if you wanted to"
+        d "I suppose I could actually"
+        d "Sounds like it would be fun"
+
+    else:
+        d "I agree"
+        d "Let's do it"
 
 
+    hide derek casual neutral at left with dissolve
+    hide josh casual neutral at right with dissolve
 
+    "The week carries on and it's finally the weekend.."
 
+     j "You ready for our movie night tonight?"
+     d "Movie night?"
+     j "Don't tell me you forgot.."
+     j "We were supposed to go this weekend.."
+     d "Oh yea. No I remember you say it now"
+     j "So we're going right?"
 
+     menu:
+        "Of course we are":
+            $ academic -= 2
+            $ social += 4
 
+            d "It's going to be a lot of fun"
 
+            if Olivia:
+                d "I'm going to text Olivia and remind her about the movie tonight"
+                j "Sounds good to me"
+                j "Tell her to be here around 6:30 so we can get food before"
+                d "Will do"
 
+                hide derek casual neutral at left with dissolve
+                hide josh casual neutral at right with dissolve
 
+                "Derek, Josh, and Olivia get dinner and have a great time at the movies"
 
+                else:
+                    j "Heck yea!"
+                    j "I've been waiting for this all week"
+                    j "Let's get food before the movie around 6:30"
+                    d "Sounds good to me!"
 
+                    "Derek and Josh get food and have a great time at the movies"
 
+            "I can't. I should really study for this upcoming exam":
 
+                j "Dang, I've been waiting for this all week.."
+                d "I know..."
+                d "I'm sorry"
+                d "I completely forgot about this exam and i don't want my grades to slip"
+                j "Well, I'll try not to spoil the movie when I get back"
+                d "You better not!"
 
+                hide josh casual neutral at right with dissolve
+                hide derek casual neutral at left with dissolve
 
+    "The two finish their semester and begin their final semester of college"
 
-
-
-
-
-
-
-
-
-
-
-
-# This part should appear in the mid to late game
-if internships:
-    scene livingroom with dissolve
+    show josh casual neutral at right with moveinright
     show derek casual neutral at left with moveinleft
-    d "Looks like I got some free time, guess I'll check my emails for the day"
-    d "Wait... that's the internship I applied for!"
-    d "No way!"
-    d "I got the internship!"
-    d "It looks like it's gonna eat up most of my free time, but I could definitely use the experience"
-    menu:
-        "Accept the Internship":
-            $ academic += 10
-            $ social -= 5
-            d "Screw it, I can do this. It is my last year of college."
-        "Don't accept the Internship":
-            $ academic -= 1
-            $ social += 2
-            d "On second thought, I am probably not cut out for this"
 
-    
+    d "I can't believe we're starting our last semester of college..."
+    j "I know right.. it's crazy"
+    d "Only a few more weeks until graduation.."
+    d "That makes me nervous"
 
-   
+    hide josh casual neutral at right with dissolve
+    hide derek casual neutral at left with dissolve
 
-    # This ends the game.
-    
-    "Months later..."
+
+    if internships:
+        scene livingroom with dissolve
+        show derek casual neutral at left with moveinleft
+        d "Looks like I got some free time, guess I'll check my emails for the day"
+        d "Wait... that's the internship I applied for!"
+        d "No way!"
+        d "I got the internship!"
+        d "It looks like it's gonna eat up most of my free time, but I could definitely use the experience"
+        menu:
+            "Accept the Internship":
+                $ academic += 10
+                $ social -= 5
+                d "Screw it, I can do this. It is my last year of college."
+            "Don't accept the Internship":
+                $ academic -= 5
+                $ social += 2
+                d "On second thought, I am probably not cut out for this"
+
+
+    #GAME ENDINGS
+    "Months later after graduation..."
 
     #Academic life with Olivia
-    if academic = 0 & Olivia = True:
-        scene livingroom with dissolve
+    if academic >= 0 and social < 0 and Olivia == True:
+
+        $ ending = 1
+
+        scene campuscafe with dissolve
         show derek casual neutral at left with moveinleft
         show olivia casual smile at left with moveinright
 
@@ -993,7 +1044,12 @@ if internships:
         hide derek casual neutral at left with dissolve
         hide olivia casual smile at left with dissolve
 
+        scene kitchenday with dissolve
+
         "Months later..."
+
+        show derek sad at left with moveinleft
+        show olivia casual frown at right with moveinright
 
         o "Hey, I think we should talk.."
         o "You've been super busy lately and I don't feel like a priority in your life anymore"
@@ -1004,7 +1060,10 @@ if internships:
 
 
     #Academic life without Olivia
-    if academic = 0 & Olivia = False:
+     if academic >= 0 and social < 0 and Olivia == False:
+
+        $ ending = 2
+
         scene livingroom with dissolve
         show derek casual neutral at left with moveinleft
         show josh casual neutral at right with moveinright
@@ -1022,37 +1081,51 @@ if internships:
         d "Let's go get dinner to celebrate. My treat"
 
         hide derek casual neutral at left with dissolve
-        hide josh casual neutral at right with disssolve
+        hide josh casual neutral at right with dissolve
 
         "Months later..."
+        scene campuscafe with dissolve
+
         "Derek and Josh run into each other at a cafe.."
+
+        show derek sad at left with moveinleft
+        show josh casual neutral at right with moveinright
 
         j "Oh hey Derek, do you think we could get together and do something fun like old times this week?"
         j "Feels like I haven't seen you in forever"
         d "Sorry man, I've just been caught up at work."
         d "Feels like I can never find a second of free time at this new job"
+        show josh mad at right with moveinright
         j "No worries, we can try another time."
 
 
     #Social life with Olivia
-    if social = 0 & Olivia = True:
-        scene livingroom with dissolve
-        show derek casual neutral at left with moveinleft
-        show olivia casual smile at left with moveinright
+     if social >= 0 and academic < 0 and Olivia == True:
+
+        $ ending = 3;
+
+        scene campuscafe with dissolve
+        show derek sad at left with moveinleft
+        show olivia casual smile at right with moveinright
 
         d "Hey Babe, do you remember the job that I interviewed for a couple of weeks ago?"
         o "Yea, why?"
-        d "The company finally contacted me back and I got the job"
+        d "The company finally contacted me back and I didn't get the job"
+        show olivia casual frown at right with moveinright
         o "Awe, that sucks."
         o "I'm really sorry"
         d "Eh.. it's alright"
         d "I guess I just lost sight of my academics this past year"
         d "My grades were slipping and I didn't do enough to prepare for my future after graduation"
 
-        hide derek casual neutral at left with dissolve
-        hide olivia casual smile at left with dissolve
+        hide derek sad at left with dissolve
+        hide olivia casual smile at right with dissolve
+        scene oldkitchen1080 with dissolve
 
         "Months later..."
+
+        show derek sad at left with moveinleft
+        show olivia casual frown at right with moveinright
 
         o "Hey, I think we should talk.."
         o "You've been really unhappy for a while and nothing I've done ever seems to help"
@@ -1062,7 +1135,9 @@ if internships:
 
 
     #Social life without Olivia
-    if social = 0 & Olivia = False:
+     if social >= 0 and academic < 0 and Olivia == False:
+
+        $ ending = 4;
 
         scene livingroom with dissolve
         show derek casual neutral at left with moveinleft
@@ -1071,11 +1146,13 @@ if internships:
         d "Hey Josh, do you remember the job that I interviewed for a couple of weeks ago?"
         j "Yea, why?"
         d "The company finally contacted me back and I didn't get the job"
+        show josh sad at right with dissolve
         j "Awe jeez, that sucks."
         j "I'm really sorry man"
         d "Eh.. it's alright"
         d "I guess I just lost sight of my academics this past year"
         d "My grades were slipping and I didn't do enough to prepare for my future after graduation"
+        show josh think at right with dissolve
         j "You and me both"
         j "I guess we'll both be stuck at our 9-5 jobs until we can figure something else out.."
         d "I guess so. This is definitely not the plan I had in mind for this year."
@@ -1085,7 +1162,9 @@ if internships:
 
 
     #Balanced life with Olivia
-    if academic = 0 & social = 0 & Olivia = True:
+    if academic >= 0 and social >= 0 and Olivia == True:
+
+        $ ending = 5
 
         scene livingroom with dissolve
         show derek casual neutral at left with moveinleft
@@ -1101,15 +1180,17 @@ if internships:
         d "This really is the opportunity of a life time and now we can get married and build a home together."
         d "I'm so excited to see what else the future holds for us."
         d "I love you Olivia"
+        o "I love you too"
 
         hide derek casual neutral at left with dissolve
         hide olivia casual smile at left with dissolve
 
 
     #Balanced life without Olivia
-    if academic = 0 & social = 0 & Olivia = False:
-
+    if academic >= 0 and social >= 0 and Olivia == False:
+        $ ending = 6
         scene livingroom with dissolve
+
         show derek casual neutral at left with moveinleft
         show josh casual neutral at right with moveinright
 
@@ -1128,5 +1209,10 @@ if internships:
         hide josh casual neutral with dissolve
         hide derek casual neutral with dissolve
 
-    #"You ended the game with an academic score of "  + academic + " and a social score of " + social + "."
+        scene restaurantb with dissolve
+
+        show derek casual neutral at left with moveinleft
+        show josh casual neutral at right with moveinright
+
+    "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
     return
