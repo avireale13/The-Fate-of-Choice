@@ -1,35 +1,73 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/code/characters.rpy", line 12, in script
-    image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
-  File "game/code/characters.rpy", line 12, in script
-    image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
-  File "game/code/characters.rpy", line 12, in <module>
-    image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
-NameError: name 'joshSize' is not defined
+While loading <renpy.display.im.Crop object at 0x000000000578b1f0>:
+  File "game/code/script.rpy", line 11, in script
+    show derek casual neutral at left with moveinleft
+error: subsurface rectangle outside surface area.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Renpy\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
-    renpy.main.main()
-  File "C:\Renpy\renpy-8.0.3-sdk\renpy\main.py", line 558, in main
-    renpy.game.context().run(node)
-  File "game/code/characters.rpy", line 12, in script
-    image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "game/code/characters.rpy", line 12, in script
-    image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
-  File "C:\Renpy\renpy-8.0.3-sdk\renpy\ast.py", line 1230, in execute
-    img = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Renpy\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/code/characters.rpy", line 12, in <module>
-    image josh casual neutral = im.FactorScale("josh_casual_open.png", joshSize)
-NameError: name 'joshSize' is not defined
+  File "game/code/script.rpy", line 11, in script
+    show derek casual neutral at left with moveinleft
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\ast.py", line 1658, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\exports.py", line 1657, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\core.py", line 2798, in do_with
+    return self.interact(trans_pause=True,
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\core.py", line 3912, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\core.py", line 2602, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 495, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\movetransition.py", line 383, in render
+    old_r = renpy.display.render.render(self.old, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\transform.py", line 747, in render
+    return transform_render(self, width, height, st, at)
+  File "accelerator.pyx", line 187, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\layout.py", line 2042, in render
+    cr = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\transform.py", line 747, in render
+    return transform_render(self, width, height, st, at)
+  File "accelerator.pyx", line 187, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\image.py", line 506, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\image.py", line 309, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\im.py", line 627, in render
+    return cache.get(self, render=True)
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\im.py", line 295, in get
+    surf = image.load()
+  File "C:\Renpy\renpy-8.0.3-sdk\renpy\display\im.py", line 1098, in load
+    return cache.get(self.image).subsurface((self.x, self.y,
+  File "src/pygame_sdl2/surface.pyx", line 642, in pygame_sdl2.surface.Surface.subsurface
+error: subsurface rectangle outside surface area.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 Semester Project 1.0
-Sun Nov 13 16:09:31 2022
+Sun Dec  4 01:43:43 2022

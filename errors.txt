@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/code/script.rpy", line 76: expected statement.
-    internships = True
-                ^
+File "game/code/characters.rpy", line 15: expected '=' not found.
+    define oliviaHeight 4000
+                        ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Nov 13 17:30:54 2022
+Sun Dec  4 01:51:18 2022
