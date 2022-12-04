@@ -1,35 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/code/characters.rpy", line 20, in script
-    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
-  File "game/code/characters.rpy", line 20, in script
-    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
-  File "game/code/characters.rpy", line 20, in <module>
-    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
-NameError: name 'olivaSize' is not defined
+  File "game/code/script.rpy", line 1294, in script
+    "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
+KeyError: 'ending'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/bootstrap.py", line 277, in bootstrap
-    renpy.main.main()
-  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/main.py", line 558, in main
-    renpy.game.context().run(node)
-  File "game/code/characters.rpy", line 20, in script
-    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "game/code/characters.rpy", line 20, in script
-    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
-  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/ast.py", line 1230, in execute
-    img = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 1085, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/code/characters.rpy", line 20, in <module>
-    image olivia casual smile = im.FactorScale("olivia_casual_smile.png", olivaSize)
-NameError: name 'olivaSize' is not defined
+  File "game/code/script.rpy", line 1294, in script
+    "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+KeyError: 'ending'
 
 macOS-10.16-x86_64-i386-64bit x86_64
 Ren'Py 8.0.3.22090809
 Semester Project 1.0
-Sat Nov 26 18:55:02 2022
+Sun Dec  4 16:07:34 2022

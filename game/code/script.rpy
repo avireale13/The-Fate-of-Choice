@@ -37,6 +37,7 @@ label start:
     $ social = 0
     $ academic = 0
     $ internships = False
+    $ ending = 0
     #FIRST MENU
     menu:
     #FIRST MENU CHOICE 1
@@ -92,7 +93,7 @@ label start:
 
             show derek sad at left with dissolve
 
-            $ academic += 1
+            $ academic += 4
             j "No worries, maybe another day"
 
             show derek casual neutral at left with dissolve
@@ -212,7 +213,7 @@ label start:
 
             show derek casual neutral at left with dissolve
 
-            #add teacher character sprite here
+            show murphy casual at right with moveinright
 
             d "Hey Mr.Murphy, I'm having a hard time understanding some of the topics that we went over in class today"
             pm "No worries, I'm always here to help"
@@ -233,6 +234,7 @@ label start:
             d "It's my last year so I can't give up now"
             pm "Well keep up to good work!"
 
+            hide murphy casual at right with dissolve
             hide derek casual neutral at left with dissolve
 
             "He goes home and some time passes by..."
@@ -313,7 +315,7 @@ label start:
         "Eh.. I think I'll go":
             show derek eyebrow up at left with dissolve
             $ social += 2
-            $ academic += 2
+            $ academic += 4
 
             d "I really want to make sure I'm ready for that test"
             j "I'll see you later tonight then"
@@ -713,7 +715,7 @@ label start:
             j "I won't"
 
             hide josh casual neutral at right with dissolve
-            show oliva casual smile at right with moveinright
+            show olivia casual smile at right with moveinright
 
             show derek surprised blush at left with dissolve
             d "Hey Olivia"
@@ -841,7 +843,10 @@ label start:
 
             " "
             " "
+
             "The next morning arrives and the two must take their exam.."
+
+            scene livingroom with dissolve
 
             show josh casual neutral at right with moveinright
             show derek casual neutral at left with moveinleft
@@ -863,7 +868,7 @@ label start:
             j "I got a 65"
             show derek sad at left with dissolve
             d "I got an 68.."
-            d "That party really was a bad idea..""
+            d "That party really was a bad idea.."
             j "I guess you were right about staying last night.."
             d "Next time I'm listening to myself.."
             show derek casual neutral with dissolve
@@ -961,26 +966,26 @@ label start:
                     hide derek casual neutral at left with dissolve
                     hide josh casual neutral at right with dissolve
 
-                   "The two take their test and get their grades back right away.."
+                    "The two take their test and get their grades back right away.."
 
-                   show josh sad at right with moveinright
-                   show derek casual neutral at left with moveinleft
+                    show josh sad at right with moveinright
+                    show derek casual neutral at left with moveinleft
 
-                   j "Well that was awful.."
-                   j "I got a 65"
-                   show derek concerned at left with dissolve
-                   d "Jeez.. now I'm really glad I didn't go last night"
-                   d "I got an 80"
-                   d "Not what I wanted but at least I passed"
-                   show derek casual neutral at left with dissolve
-                   j "I guess you were right about staying last night.."
-                   d "You'll get it next time"
+                    j "Well that was awful.."
+                    j "I got a 65"
+                    show derek concerned at left with dissolve
+                    d "Jeez.. now I'm really glad I didn't go last night"
+                    d "I got an 80"
+                    d "Not what I wanted but at least I passed"
+                    show derek casual neutral at left with dissolve
+                    j "I guess you were right about staying last night.."
+                    d "You'll get it next time"
 
     j "Well on a lighter note.."
-    j "There's a movie I've been wanting to watch that comes out this weekend"
-    j "I think we should go watch it"
+    j "There's a movie I've been wanting to watch.."
+    j "It comes out this weekend and I think we should go watch it"
 
-    if Olivia = True:
+    if Olivia:
         j "You could even bring Olivia with if you wanted to"
         d "I suppose I could actually"
         d "Sounds like it would be fun"
@@ -995,16 +1000,18 @@ label start:
 
     "The week carries on and it's finally the weekend.."
 
-     j "You ready for our movie night tonight?"
-     show derek concerned at left with dissolve
-     d "Movie night?"
-     j "Don't tell me you forgot.."
-     j "We were supposed to go this weekend.."
-     show derek surprised at left with dissolve
-     d "Oh yea. No I remember you say it now"
-     j "So we're going right?"
+    show josh casual neutral at right with dissolve
 
-     menu:
+    j "You ready for our movie night tonight?"
+    show derek concerned at left with dissolve
+    d "Movie night?"
+    j "Don't tell me you forgot.."
+    j "We were supposed to go this weekend.."
+    show derek surprised at left with dissolve
+    d "Oh yea. No I remember you saying it now"
+    j "So we're going right?"
+
+    menu:
         "Of course we are":
             show derek casual neutral at left with dissolve
             $ academic -= 2
@@ -1023,15 +1030,16 @@ label start:
 
                 "Derek, Josh, and Olivia get dinner and have a great time at the movies"
 
-                else:
-                    j "Heck yea!"
-                    j "I've been waiting for this all week"
-                    j "Let's get food before the movie around 6:30"
-                    d "Sounds good to me!"
+            else:
+                j "Heck yea!"
+                j "I've been waiting for this all week"
+                j "Let's get food before the movie around 6:30"
+                d "Sounds good to me!"
 
-                    "Derek and Josh get food and have a great time at the movies"
+                "Derek and Josh get food and have a great time at the movies"
 
-            "I can't. I should really study for this upcoming exam":
+
+        "I can't. I should really study for this upcoming exam":
                 show derek concerned at left with dissolve
 
                 j "Dang, I've been waiting for this all week.."
@@ -1084,9 +1092,9 @@ label start:
     "Months later after graduation..."
 
     #Academic life with Olivia
-    if academic >= 0 and social < 0 and Olivia == True:
+    if academic >= 18 and social < 18 and Olivia:
 
-        $ ending = 1
+        $ ending = 1;
 
         scene campuscafe with dissolve
         show derek casual neutral at left with moveinleft
@@ -1123,9 +1131,9 @@ label start:
 
 
     #Academic life without Olivia
-     if academic >= 0 and social < 0 and Olivia == False:
+    if academic >= 18 and social < 19 and Olivia == False:
 
-        $ ending = 2
+        $ ending = 2;
 
         scene livingroom with dissolve
         show derek casual neutral at left with moveinleft
@@ -1166,7 +1174,7 @@ label start:
 
 
     #Social life with Olivia
-     if social >= 0 and academic < 0 and Olivia == True:
+    if social >= 18 and academic < 18 and Olivia:
 
         $ ending = 3;
 
@@ -1204,7 +1212,7 @@ label start:
 
 
     #Social life without Olivia
-     if social >= 0 and academic < 0 and Olivia == False:
+    if social >= 18 and academic <= 17 and Olivia == False:
 
         $ ending = 4;
 
@@ -1231,9 +1239,9 @@ label start:
 
 
     #Balanced life with Olivia
-    if academic >= 0 and social >= 0 and Olivia == True:
+    if academic >= 0 and social >= 17 and Olivia:
 
-        $ ending = 5
+        $ ending = 5;
 
         scene livingroom with dissolve
         show derek casual neutral at left with moveinleft
@@ -1256,8 +1264,8 @@ label start:
 
 
     #Balanced life without Olivia
-    if academic >= 0 and social >= 0 and Olivia == False:
-        $ ending = 6
+    if academic >= 17 and social >= 18 and Olivia == False:
+        $ ending = 6;
         scene livingroom with dissolve
 
         show derek casual neutral at left with moveinleft
@@ -1282,6 +1290,10 @@ label start:
 
         show derek casual neutral at left with moveinleft
         show josh casual neutral at right with moveinright
+
+    else:
+        $ ending = "unknown"
+        "Builder error"
 
     "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
     return
