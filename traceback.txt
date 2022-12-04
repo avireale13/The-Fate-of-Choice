@@ -1,15 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
+<<<<<<< HEAD
   File "game/code/script.rpy", line 983, in script
     if Olivia:
   File "game/code/script.rpy", line 983, in <module>
     if Olivia:
 NameError: name 'Olivia' is not defined
+=======
+  File "game/code/script.rpy", line 1294, in script
+    "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
+KeyError: 'ending'
+>>>>>>> 890da8f2140d02bdb671d27d14b70cbcd1c467f5
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
   File "game/code/script.rpy", line 983, in script
     if Olivia:
   File "C:\Renpy\renpy-8.0.3-sdk\renpy\ast.py", line 2115, in execute
@@ -21,8 +28,35 @@ Full traceback:
   File "game/code/script.rpy", line 983, in <module>
     if Olivia:
 NameError: name 'Olivia' is not defined
+=======
+  File "game/code/script.rpy", line 1294, in script
+    "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+KeyError: 'ending'
+>>>>>>> 890da8f2140d02bdb671d27d14b70cbcd1c467f5
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 Semester Project 1.0
+<<<<<<< HEAD
 Sun Dec  4 17:15:20 2022
+=======
+Sun Dec  4 16:07:34 2022
+>>>>>>> 890da8f2140d02bdb671d27d14b70cbcd1c467f5

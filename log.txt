@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Sun Dec  4 17:49:57 2022
 Windows-10-10.0.19045
 Ren'Py 8.0.3.22090809
@@ -16,6 +17,153 @@ Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Dump and make backups. took 0.03s
+=======
+Sun Dec  4 15:47:12 2022
+macOS-10.16-x86_64-i386-64bit
+Ren'Py 8.0.3.22090809
+ 
+
+Bootstrap to the start of init.init took 0.12s
+Early init took 0.02s
+Loader init took 0.08s
+Loading error handling took 0.04s
+Loading script took 0.92s
+Loading save slot metadata. took 0.08s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.38s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/avireale/Library/RenPy/backups/The Fate of Choice':
+Dump and make backups. took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.05s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.60s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) UHD Graphics 617'
+Version: b'2.1 INTEL-18.8.5'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1022, 575) drawable=(2044, 1150)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/code/script.rpy", line 1214, in script
+    if social >= 18 and academic =< 17  and Olivia == False:
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/ast.py", line 2115, in execute
+    if renpy.python.py_eval(condition):
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 1090, in py_eval
+    code = py_compile(code, 'eval')
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 1027, in py_compile
+    raise e
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 979, in py_compile
+    raise orig_e
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 972, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (script.rpy, line 1214)
+
+While running game code:
+  File "game/code/script.rpy", line 1214, in script
+    if social >= 18 and academic =< 17  and Olivia == False:
+SyntaxError: invalid syntax (script.rpy, line 1214)
+Resetting cache.
+Bootstrap to the start of init.init took 336.60s
+Early init took 0.00s
+Loader init took 0.06s
+Loading error handling took 0.05s
+Loading script took 0.88s
+Loading save slot metadata. took 0.04s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.09s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/avireale/Library/RenPy/backups/The Fate of Choice':
+Dump and make backups. took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) UHD Graphics 617'
+Version: b'2.1 INTEL-18.8.5'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1022, 575) drawable=(2044, 1150)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/code/script.rpy", line 1214, in script
+    if social >= 18 and academic =< 17 and Olivia == False:
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/ast.py", line 2115, in execute
+    if renpy.python.py_eval(condition):
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 1090, in py_eval
+    code = py_compile(code, 'eval')
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 1027, in py_compile
+    raise e
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 979, in py_compile
+    raise orig_e
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 972, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (script.rpy, line 1214)
+
+While running game code:
+  File "game/code/script.rpy", line 1214, in script
+    if social >= 18 and academic =< 17 and Olivia == False:
+SyntaxError: invalid syntax (script.rpy, line 1214)
+Resetting cache.
+Bootstrap to the start of init.init took 353.71s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.41s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/avireale/Library/RenPy/backups/The Fate of Choice':
+Dump and make backups. took 0.08s
+>>>>>>> 890da8f2140d02bdb671d27d14b70cbcd1c467f5
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.01s
@@ -24,6 +172,7 @@ nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
 Creating interface object took 0.24s
 Cleaning stores took 0.00s
+<<<<<<< HEAD
 Init translation took 0.02s
 Build styles took 0.00s
 Load screen analysis took 0.02s
@@ -35,6 +184,429 @@ Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.06s
+=======
+Init translation took 0.07s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) UHD Graphics 617'
+Version: b'2.1 INTEL-18.8.5'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1022, 575) drawable=(2044, 1150)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/code/script.rpy", line 1293, in script
+    "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+KeyError: 'ending'
+
+While running game code:
+  File "game/code/script.rpy", line 1293, in script
+    "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
+KeyError: 'ending'
+Resetting cache.
+Bootstrap to the start of init.init took 409.62s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.43s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/avireale/Library/RenPy/backups/The Fate of Choice':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) UHD Graphics 617'
+Version: b'2.1 INTEL-18.8.5'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1022, 575) drawable=(2044, 1150)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/code/script.rpy", line 1294, in script
+    "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+KeyError: 'ending'
+
+While running game code:
+  File "game/code/script.rpy", line 1294, in script
+    "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
+KeyError: 'ending'
+Resetting cache.
+Bootstrap to the start of init.init took 1111.77s
+Early init took 0.00s
+Loader init took 0.07s
+Loading error handling took 0.03s
+Loading script took 0.88s
+Loading save slot metadata. took 0.04s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.10s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/avireale/Library/RenPy/backups/The Fate of Choice':
+Dump and make backups. took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) UHD Graphics 617'
+Version: b'2.1 INTEL-18.8.5'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1022, 575) drawable=(2044, 1150)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/code/script.rpy", line 1095, in script
+    if academic >= 18 and social < 18 and Olivia = True:
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/ast.py", line 2115, in execute
+    if renpy.python.py_eval(condition):
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 1090, in py_eval
+    code = py_compile(code, 'eval')
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 1027, in py_compile
+    raise e
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 979, in py_compile
+    raise orig_e
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 972, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (script.rpy, line 1095)
+
+While running game code:
+  File "game/code/script.rpy", line 1095, in script
+    if academic >= 18 and social < 18 and Olivia = True:
+SyntaxError: invalid syntax (script.rpy, line 1095)
+Resetting cache.
+Bootstrap to the start of init.init took 1126.41s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.03s
+Loading script took 0.84s
+Loading save slot metadata. took 0.04s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.11s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/avireale/Library/RenPy/backups/The Fate of Choice':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.11s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) UHD Graphics 617'
+Version: b'2.1 INTEL-18.8.5'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1022, 575) drawable=(2044, 1150)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/code/script.rpy", line 1134, in script
+    if academic >= 18 and social < 19 and Olivia = False:
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/ast.py", line 2115, in execute
+    if renpy.python.py_eval(condition):
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 1090, in py_eval
+    code = py_compile(code, 'eval')
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 1027, in py_compile
+    raise e
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 979, in py_compile
+    raise orig_e
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/python.py", line 972, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (script.rpy, line 1134)
+
+While running game code:
+  File "game/code/script.rpy", line 1134, in script
+    if academic >= 18 and social < 19 and Olivia = False:
+SyntaxError: invalid syntax (script.rpy, line 1134)
+Resetting cache.
+Bootstrap to the start of init.init took 1165.24s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.70s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.09s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/avireale/Library/RenPy/backups/The Fate of Choice':
+Dump and make backups. took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) UHD Graphics 617'
+Version: b'2.1 INTEL-18.8.5'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1022, 575) drawable=(2044, 1150)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/code/script.rpy", line 1294, in script
+    "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+KeyError: 'ending'
+
+While running game code:
+  File "game/code/script.rpy", line 1294, in script
+    "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
+KeyError: 'ending'
+Resetting cache.
+Bootstrap to the start of init.init took 1219.70s
+Early init took 0.00s
+Loader init took 0.07s
+Loading error handling took 0.02s
+Loading script took 0.77s
+Loading save slot metadata. took 0.04s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.09s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/avireale/Library/RenPy/backups/The Fate of Choice':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) UHD Graphics 617'
+Version: b'2.1 INTEL-18.8.5'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1022, 575) drawable=(2044, 1150)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/code/script.rpy", line 1294, in script
+    "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy/substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+KeyError: 'ending'
+
+While running game code:
+  File "game/code/script.rpy", line 1294, in script
+    "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
+KeyError: 'ending'
+Resetting cache.
+Bootstrap to the start of init.init took 1244.30s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.02s
+Loading script took 0.73s
+Loading save slot metadata. took 0.04s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Volumes/renpy-8.0.3-sdk/renpy-8.0.3-sdk/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.07s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/avireale/Library/RenPy/backups/The Fate of Choice':
+Dump and make backups. took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.10s
+>>>>>>> 890da8f2140d02bdb671d27d14b70cbcd1c467f5
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)

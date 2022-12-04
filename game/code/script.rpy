@@ -94,7 +94,7 @@ label start:
 
             show derek sad at left with dissolve
 
-            $ academic += 1
+            $ academic += 4
             j "No worries, maybe another day"
 
             show derek casual neutral at left with dissolve
@@ -236,6 +236,7 @@ label start:
             d "It's my last year so I can't give up now"
             pm "Well keep up to good work!"
 
+            hide murphy casual at right with dissolve
             hide derek casual neutral at left with dissolve
 
             "He goes home and some time passes by..."
@@ -836,7 +837,10 @@ label start:
 
             " "
             " "
+
             "The next morning arrives and the two must take their exam.."
+
+            scene livingroom with dissolve
 
             show josh casual neutral at right with moveinright
             show derek casual neutral at left with moveinleft
@@ -972,8 +976,8 @@ label start:
                     d "You'll get it next time"
 
     j "Well on a lighter note.."
-    j "There's a movie I've been wanting to watch that comes out this weekend"
-    j "I think we should go watch it"
+    j "There's a movie I've been wanting to watch.."
+    j "It comes out this weekend and I think we should go watch it"
 
     if Olivia:
         j "You could even bring Olivia with if you wanted to"
@@ -990,13 +994,15 @@ label start:
 
     "The week carries on and it's finally the weekend.."
 
+    show josh casual neutral at right with dissolve
+
     j "You ready for our movie night tonight?"
     show derek concerned at left with dissolve
     d "Movie night?"
     j "Don't tell me you forgot.."
     j "We were supposed to go this weekend.."
     show derek surprised at left with dissolve
-    d "Oh yea. No I remember you say it now"
+    d "Oh yea. No I remember you saying it now"
     j "So we're going right?"
 
     menu: # Movie Moment
@@ -1082,9 +1088,9 @@ label start:
     "Months later after graduation..."
 
     #Academic life with Olivia
-    if academic >= 0 and social < 0 and Olivia == True:
+    if academic >= 18 and social < 18 and Olivia:
 
-        $ ending = 1
+        $ ending = 1;
 
         scene campuscafe with dissolve
         show derek casual neutral at left with moveinleft
@@ -1121,9 +1127,9 @@ label start:
 
 
     #Academic life without Olivia
-    if academic >= 0 and social < 0 and Olivia == False:
+    if academic >= 18 and social < 19 and Olivia == False:
 
-        $ ending = 2
+        $ ending = 2;
 
         scene livingroom with dissolve
         show derek casual neutral at left with moveinleft
@@ -1164,7 +1170,7 @@ label start:
 
 
     #Social life with Olivia
-    if social >= 0 and academic < 0 and Olivia == True:
+    if social >= 18 and academic < 18 and Olivia:
 
         $ ending = 3;
 
@@ -1202,7 +1208,7 @@ label start:
 
 
     #Social life without Olivia
-    if social >= 0 and academic < 0 and Olivia == False:
+    if social >= 18 and academic <= 17 and Olivia == False:
 
         $ ending = 4;
 
@@ -1229,9 +1235,9 @@ label start:
 
 
     #Balanced life with Olivia
-    if academic >= 0 and social >= 0 and Olivia == True:
+    if academic >= 0 and social >= 17 and Olivia:
 
-        $ ending = 5
+        $ ending = 5;
 
         scene livingroom with dissolve
         show derek casual neutral at left with moveinleft
@@ -1254,8 +1260,8 @@ label start:
 
 
     #Balanced life without Olivia
-    if academic >= 0 and social >= 0 and Olivia == False:
-        $ ending = 6
+    if academic >= 17 and social >= 18 and Olivia == False:
+        $ ending = 6;
         scene livingroom with dissolve
 
         show derek casual neutral at left with moveinleft
@@ -1280,6 +1286,10 @@ label start:
 
         show derek casual neutral at left with moveinleft
         show josh casual neutral at right with moveinright
+
+    else:
+        $ ending = "unknown"
+        "Builder error"
 
     "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
     return
