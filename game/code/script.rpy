@@ -1088,7 +1088,7 @@ label start:
     "Months later after graduation..."
 
     #Academic life with Olivia
-    if academic >= 18 and social < 18 and Olivia:
+    if academic >= 1 and social < 0 and Olivia:
 
         $ ending = 1;
 
@@ -1127,7 +1127,7 @@ label start:
 
 
     #Academic life without Olivia
-    if academic >= 18 and social < 19 and Olivia == False:
+    if academic >= 1 and social < 0 and Olivia == False:
 
         $ ending = 2;
 
@@ -1170,7 +1170,7 @@ label start:
 
 
     #Social life with Olivia
-    if social >= 18 and academic < 18 and Olivia:
+    if social >= 1 and academic < 0 and Olivia:
 
         $ ending = 3;
 
@@ -1208,7 +1208,7 @@ label start:
 
 
     #Social life without Olivia
-    if social >= 18 and academic <= 17 and Olivia == False:
+    if social >= 1 and academic < 0 and Olivia == False:
 
         $ ending = 4;
 
@@ -1235,7 +1235,7 @@ label start:
 
 
     #Balanced life with Olivia
-    if academic >= 0 and social >= 17 and Olivia:
+    if academic >= 1 and social >= 1 and Olivia:
 
         $ ending = 5;
 
@@ -1260,7 +1260,7 @@ label start:
 
 
     #Balanced life without Olivia
-    if academic >= 17 and social >= 18 and Olivia == False:
+    if academic >= 1 and social >= 1 and Olivia == False:
         $ ending = 6;
         scene livingroom with dissolve
 
@@ -1288,7 +1288,7 @@ label start:
         show josh casual neutral at right with moveinright
 
     else:
-        $ ending = "unknown"
+        $ ending = "-1"
         "Builder error"
 
     "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
