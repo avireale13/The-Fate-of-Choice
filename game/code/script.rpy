@@ -1287,9 +1287,6 @@ label start:
         show derek casual neutral at left with moveinleft
         show josh casual neutral at right with moveinright
 
-    else:
-        $ ending = "-1"
-        "Builder error"
 
     "You ended the game with an academic score of [academic] and a social score of [social]. You got ending [ending] out of 6!"
     return
